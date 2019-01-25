@@ -34,3 +34,15 @@
   border: 1px solid white;
   padding: 10px 20px;
 }
+
+.back-to-the-top {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  font-size: 2em;
+  color: white;
+  padding: 10px;
+}
+.back-to-the-top a {
+  color: white;
+}

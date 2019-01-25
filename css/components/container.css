@@ -1,6 +1,6 @@
 .container {
   width: 80%;
-  margin: 15px auto;
+  margin: 0px auto;
   padding: 25px 25px 25px 25px;
   border-radius: 3px;
 
@@ -30,11 +30,23 @@
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.experiences h2 {
+.container h2 {
+  text-align: left;
   font-size: 2em;
 }
 
 #resume, #competences, #projects, #links {
-  padding-top: 70px;
-  min-height: calc(100vh - 70px);
+  padding-top: 60px;
+  min-height: calc(100vh - 20px);
+  border: 1px solid blue;
+}
+
+.resume-div {
+  margin-top: 20vh;
+
+}
+
+.resume-div div {
+  height: 40vh;
+  width: 40vh;
 }

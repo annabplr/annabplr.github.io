@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="description" content="Mon profil">
     <title>annadev.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Imprima|Montserrat" rel="stylesheet">
 
   </head>
@@ -42,44 +44,96 @@
         </ul>
       </div>
 
-
+      <div class="back-to-the-top">
+        <a href="#profile-header"><i class="fas fa-arrow-alt-circle-up"></i></a>
+      </div>
 
       <div class="container align-right" id="resume">
-        <h2>En quelques mots</h2>
-        <div>
-          <div>
-            <div>
-                <h3>J'écris</h3>
-            </div>
-            <div>
+        <h2>En deux mots</h2>
+          <div class="resume-div row">
+            <div class="col-xs-12 col-sm-6" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://res.cloudinary.com/annabplr/image/upload/v1546857659/background-image-vegetables.jpg');">
                 <h3>Je code</h3>
             </div>
+            <div class="col-xs-12 col-sm-6" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://res.cloudinary.com/annabplr/image/upload/v1546857659/background-image-vegetables.jpg');">
+                <h3>J'écris'</h3>
+            </div>
           </div>
-        </div>
       </div>
 
       <div class="container" id="competences">
-        <h2>Mes compétences</h2>
+        <h2>mes compétences</h2>
         <div>
+          <ul>
+            <li>Ruby on Rails</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>javascript</li>
+            <li>illustrator</li>
+            <li>git & gitHub</li>
+            <li>heroku</li>
+            <li>bootstrap / css grid</li>
+            <li>sql</li>
+            <li>Progressive Web App</li>
 
+          </ul>
           </div>
+          <h2>j'aime</h2>
+          <ul>
+            <li>les designs minimalistes</li>
+            <li>les sites responsives</li>
+            <li>apprendre</li>
+            <li>découvrir de nouvelles choses / technos</li>
+            <li>me casser la tête sur des algorithmes</li>
+            <li>passer du temps à peaufiner le design d'un site</li>
+          </ul>
         </div>
 
 
       <div class="container align-right" id="projects">
-        <h2>Mes projets</h2>
+        <h2>mes projets</h2>
+        <div class="row">
+          <div class="col-xs-12 col-sm-3">
+            <p>batchka</p>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <p>#joliesdates</p>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <p>terra cognita</p>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <p>la pioche</p>
+          </div>
+        </div>
 
       </div>
 
       <div class="container" id="links">
         <h2>Contact 💬</h2>
+        <div class="row">
+        <form accept-charset="UTF-8" action="https://usebasin.com/f/ca1342003997" enctype="multipart/form-data" method="POST">
+          <div class="col-xs-12">
+          <label for="email-address">votre e-mail</label>
+          <input type="email" id="email" name="email" required>
+          </div>
+          <div class="col-xs-12">
+          <label for="comment">votre message</label>
+          <textarea rows="4" cols="50" name="comment" required>
+          </textarea>
+          </div>
+          <div class="col-xs-4 offset-xs-4">
+          <button type="submit">envoyer</button>
+          </div>
+        </form>
         <ul>
           <li><a href="mailto:annabelle@joliesdates.fr"><i class="far fa-envelope"></i></a></li>
           <li><a href="www.joliesdates.fr" target="_blank" id="website">#joliesdates</a></li>
           <li><a href="https://www.linkedin.com/in/apellier/"><i class="fab fa-linkedin-in"></i></a></li>
 
         </ul>
+        </div>
       </div>
     </div>
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
