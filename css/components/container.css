@@ -50,3 +50,46 @@
   height: 40vh;
   width: 40vh;
 }
+
+.form-line {
+  width: 100%;
+}
+
+form {
+  width: 80%;
+  margin: 20vh auto;
+}
+
+.contactform {
+  position: relative;
+  background: white;
+  min-height: 30vh;
+}
+
+.form-done {
+  color: white;
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.form-fail {
+  color: white;
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.display-form-done {
+  display: block !important;
+}
