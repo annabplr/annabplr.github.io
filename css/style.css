@@ -1,0 +1,65 @@
+@import url("components/profile-header.css");
+@import url("components/navbar.css");
+@import url("components/container.css");
+@import url("components/tables.css");
+@import url("components/links.css");
+
+body {
+  color: #605F5E;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ea9085;
+  margin-top: 0px;
+}
+
+h1, h2, h3 {
+  font-family: 'Imprima', sans-serif;
+}
+
+h1 {
+  background-color: #e2776a;
+  color: #F3F3F3;
+  line-height: 0.3;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding-right: 75px;
+  padding-bottom: 11px;
+  margin-top: 40px;
+  margin-right: 0px;
+}
+
+h2 {
+  text-align: right;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  font-weight: lighter;
+  color: #e2776a;
+
+}
+
+h3 {
+  background-color: #ea9085;
+  color: #F3F3F3;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  font-size: 2em;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  margin-left: -25px;
+  margin-right: 280px;
+  margin-bottom: 0px;
+  line-height: 0.8;
+}
+
+
+h4 {
+  color: #ea9085;
+  font-size: 1.3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#page-content {
+  margin-top: 3px;
+}
