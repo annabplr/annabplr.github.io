@@ -115,40 +115,78 @@
   width: 100%;
 }
 
-form {
-  width: 80%;
-  margin: 20vh auto;
+#email, #message {
+  width: 100%;
+  margin-bottom: 2vh;
 }
 
+form {
+  width: 90%;
+  margin: 3vh auto;
+  font-size: 1.5vh;
+}
+
+textarea, input {
+  box-shadow: 0;
+  border: none;
+  background-color: #ffe3e0;
+  color: #ea9085;
+  padding: 5px;
+}
+textarea::placeholder, input::placeholder {
+  color: #ea9085
+}
+
+button {
+  width: 100%;
+  background-color: transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: none;
+  border-style: none;
+  color: #ea9085;
+  border: 1px solid #ea9085;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+button:hover, button:active {
+  background-color: #ea9085;
+  border: 1px solid #ea9085;
+  color: white;
+}
 .contactform {
+  width: 80%;
+  margin: 10vh auto;
   position: relative;
   background: white;
   min-height: 30vh;
 }
 
-.form-done {
-  color: white;
-  background: blue;
+.form-done, .form-fail {
+  color: #ea9085;
+  background: white;
   position: absolute;
   top: 0;
   left: 0;
-  border: 1px solid red;
   height: 100%;
   width: 100%;
   display: none;
 }
 
-.form-fail {
-  color: white;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid red;
-  height: 100%;
-  width: 100%;
-  display: none;
+.form-done p, .form-fail p {
+  font-size: 1.5vh;
+  color: #ea9085;
+  border: 1px solid #ea9085;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 2px;
+  margin-left: 20%;
+  width: 60%;
+
+
 }
+
 
 .display-form-done {
   display: block !important;

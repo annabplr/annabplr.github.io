@@ -25,10 +25,42 @@ a:hover {
   list-style: none;
   display: inline-block;
   text-align: center;
+  font-size: 2vh;
+  color: white;
+  padding-left: 0;
+  margin: 20px ;
+
+}
+
+
+#links li:hover i {
+  color: #ea9085;
+  background-color: white;
+
+  border-radius: 50%;
+  transition: width 2s;
+}
+#links li i {
+  background-color: #ea9085;
+  padding: 15px;
+  border-radius: 2px;
+  transition: width 2s;
+}
+
+
+#links h3 {
+  text-align: center;
+  padding: 10px 20px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 0;
+  border-radius: 2px;
 }
 
 #links ul {
+  margin-top: 5vh;
   text-align: center;
   padding-inline-start: 0px;
   margin-left: 0px;
 }
+
