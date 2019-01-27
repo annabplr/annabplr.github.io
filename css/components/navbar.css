@@ -1,10 +1,11 @@
 #navbar {
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  bottom: 0px;
+
   background-color: #ea9085;
-  margin: 0 auto;
+
   padding: 1px 1px 1px 1px;
-  z-index: 9;
+  z-index: 6;
   border: 0;
   width: 100%;
 }
@@ -16,7 +17,7 @@
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 1em;
+  font-size: 1.5vh;
   text-shadow : none;
   opacity: 1;
 
@@ -29,13 +30,26 @@
 }
 
 #navbar a {
-  color: #F3F3F3;
+  color: white;
   padding-bottom: 12px;
   text-transform: lowercase;
-  font-weight: lighter;
+  font-weight: light;
   letter-spacing: 2px;
 }
 
 #navbar a:hover {
   border-bottom: 4px solid #e2776a;
+}
+
+.back-to-the-top {
+  position: fixed;
+  bottom: 4vh;
+  right: 0px;
+  font-size: 2em;
+  color: white;
+  padding: 10px;
+  z-index: 9;
+}
+.back-to-the-top a {
+  color: #ea9085;
 }
