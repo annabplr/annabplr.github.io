@@ -47,15 +47,3 @@
   padding: 10px 20px;
 }
 
-.back-to-the-top {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  font-size: 2em;
-  color: white;
-  padding: 10px;
-  z-index: 9;
-}
-.back-to-the-top a {
-  color: #ea9085;
-}

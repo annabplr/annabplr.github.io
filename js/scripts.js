@@ -65,3 +65,37 @@ document.querySelectorAll(".resume-each").forEach((button) => {
         .addTo(controller);
     }
   });
+
+// display text when click on the div projet
+
+document.querySelector(".terracognita").
+  addEventListener("click", (event) => {
+    document.querySelector('.detail-batchka').classList.remove("display-projects");
+    document.querySelector('.detail-joliesdates').classList.remove("display-projects");
+    document.querySelector('.detail-lapioche').classList.remove("display-projects");
+  document.querySelector('.detail-terracognita').classList.toggle("display-projects");
+});
+
+document.querySelector(".batchka").
+  addEventListener("click", (event) => {
+    document.querySelector('.detail-terracognita').classList.remove("display-projects");
+    document.querySelector('.detail-joliesdates').classList.remove("display-projects");
+    document.querySelector('.detail-lapioche').classList.remove("display-projects");
+  document.querySelector('.detail-batchka').classList.toggle("display-projects");
+});
+
+document.querySelector(".joliesdates").
+  addEventListener("click", (event) => {
+    document.querySelector('.detail-batchka').classList.remove("display-projects");
+    document.querySelector('.detail-terracognita').classList.remove("display-projects");
+    document.querySelector('.detail-lapioche').classList.remove("display-projects");
+  document.querySelector('.detail-joliesdates').classList.toggle("display-projects");
+});
+
+document.querySelector(".lapioche").
+  addEventListener("click", (event) => {
+    document.querySelector('.detail-batchka').classList.remove("display-projects");
+    document.querySelector('.detail-joliesdates').classList.remove("display-projects");
+    document.querySelector('.detail-terracognita').classList.remove("display-projects");
+  document.querySelector('.detail-lapioche').classList.toggle("display-projects");
+});
