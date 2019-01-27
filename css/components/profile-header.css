@@ -54,7 +54,8 @@
   font-size: 2em;
   color: white;
   padding: 10px;
+  z-index: 9;
 }
 .back-to-the-top a {
-  color: white;
+  color: #ea9085;
 }
