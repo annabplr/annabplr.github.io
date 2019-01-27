@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Mon profil">
     <title>annadev.com</title>
+    <link rel="icon" href="images/profile_pic.jpg">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
@@ -17,34 +18,28 @@
   <body id="hello">
 
     <div id="page-content">
-      <div id="profile-header" data-aos="zoom-in">
-        <div>
-        <div class="box-head">
-          <img src="images/profile_pic.jpg" alt="profile_pic" id="avatar">
-          <div>
-            <h2>hello, je m'appelle</h2>
-            <h1>Annabelle PELLIER</h1>
-            <h2>et je suis <strong>développeuse web full stack</strong></h2>
 
+      <div id="particles-js" data-aos="zoom-in">
+        <div id="profile-header">
+          <div>
+          <div class="box-head">
+            <img src="images/profile_pic.jpg" alt="profile_pic" id="avatar">
+            <div>
+              <h2>hello, je suis</h2>
+              <h1>Annabelle PELLIER</h1>
+              <h2>et je suis <strong>développeuse web full stack</strong></h2>
+              <h2 style="text-align: left">à Lyon</h2>
+
+            </div>
           </div>
-        </div>
           <div class="button-more">
             <a href="#resume">En savoir +</a>
-            </div>
-            </div>
+          </div>
+          </div>
+        </div>
       </div>
 
-      <div id="navbar" class="container">
-        <ul>
-          <li><a href="#hello">Top</a> </li>
-          <li><a href="#resume">Résumé</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#projects">Projets</a></li>
 
-          <li><a href="#links">Contact</a></li>
-          <li><a href="/images/CV_APellier.pdf" target="_blank">CV</a></li>
-        </ul>
-      </div>
 
       <div class="back-to-the-top">
         <a href="#profile-header"><i class="fas fa-arrow-alt-circle-up"></i></a>
@@ -53,11 +48,17 @@
       <div class="container align-right" id="resume">
         <h2>En deux mots</h2>
           <div class="resume-div row">
-            <div class="col-xs-12 col-md-6 resume-each" data-aos="fade-right" style="background-image: url('images/coder-annadev.jpg');">
+            <div class="col-xs-12 col-md-4 col-md-offset-2" data-aos="fade-right">
+              <div class="resume-each" style="background-image: url('images/coder-annadev.jpg');">
                 <h3>Je code</h3>
+                <div class="resume-hide"> <h4> autant du back que du front ! </h4></div>
+              </div>
             </div>
-            <div class="col-xs-12 col-md-6 resume-each" data-aos="fade-left" style="background-image: url('images/ecrire-annadev.jpg');">
-                <h3>J'écris'</h3>
+            <div class="col-xs-12 col-md-4 " data-aos="fade-left">
+            <div class="resume-each" style="background-image: url('images/ecrire-annadev.jpg');">
+                <h3>J'écris</h3>
+                <div class="resume-hide"> <h4> de ma main gauche,<br>et je réalise des petites affiches </h4></div>
+                </div>
             </div>
           </div>
       </div>
@@ -92,19 +93,27 @@
 
 
       <div class="container align-right" id="projects">
-        <h2>mes projets</h2>
+        <h2>projets</h2>
         <div class="row">
-          <div class="col-xs-12 col-md-3" data-aos="fade-right">
+          <div class="col-xs-6 col-md-3" data-aos="fade-right">
+            <div>
             <p>batchka</p>
+            </div>
           </div>
-          <div class="col-xs-12 col-md-3" data-aos="fade-right">
+          <div class="col-xs-6 col-md-3" data-aos="fade-right">
+            <div>
             <p>#joliesdates</p>
+            </div>
           </div>
-          <div class="col-xs-12 col-md-3" data-aos="fade-left">
+          <div class="col-xs-6 col-md-3" data-aos="fade-left">
+            <div>
             <p>terra cognita</p>
+            </div>
           </div>
-          <div class="col-xs-12 col-md-3" data-aos="fade-left">
+          <div class="col-xs-6 col-md-3" data-aos="fade-left">
+            <div>
             <p>la pioche</p>
+            </div>
           </div>
         </div>
 
@@ -145,6 +154,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="text/javascript">
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+</script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

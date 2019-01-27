@@ -1,11 +1,3 @@
-.container {
-  width: 80%;
-  margin: 0px auto;
-  padding: 25px 25px 25px 25px;
-  border-radius: 3px;
-
-}
-
 .container p {
   text-align: justify;
   padding-left: 110px;
@@ -37,31 +29,70 @@
 
 #resume, #competences, #projects, #links {
   padding-top: 60px;
-  min-height: calc(100vh - 20px);
+  min-height: 100vh;
   border: 1px solid blue;
 }
 
+#resume {
+}
+
 .resume-div {
-  margin: 0 auto;
-  margin-top: 10vh;
+
+  margin-top: 10%;
   width: 100%;
 
 }
 
 .resume-each {
-  height: 45vh;
-  width: 45vh;
-  margin: 20px;
+  cursor: pointer;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
   background-size: contain;
+  margin: 10px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+  border-radius: 2px;
+
 }
 
-.resume-each h3 {
-  filter: blur(0px);
-  background-color: transparent;
-  margin-left: 10px;
-  margin-right: 0px;
-  z-index: 3;
 
+.resume-each h3 {
+  text-transform: lowercase;
+  position: absolute;
+  bottom: 3%;
+  left: -1%;
+  padding: 10px 20px;
+  color: white ;
+  background-color: #ea9085;
+  border-radius: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0;
+  z-index: 3;
+  font-size: 4vh;
+
+}
+
+.resume-hide {
+  position: absolute;
+  bottom: 21%;
+  right: -1%;
+  width: 60%;
+
+  background-color: #ea9085;
+  padding: 10px;
+  display: none;
+}
+
+.resume-hide h4 {
+  font-size: 2vh;
+  text-align: justify;
+  color: white;
+
+}
+
+.resume-display {
+  display: block;
 }
 
 

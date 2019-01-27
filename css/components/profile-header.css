@@ -1,15 +1,27 @@
+#particles-js {
+  position: relative;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 3;
+  margin-right: 0;
+
+}
 #profile-header {
-  background-color: #ea9085;
-  border : 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border : 1px solid red;
   box-shadow: 0 0 0 0;
   text-align: center;
   padding-top: 0px;
   padding-bottom: 0px;
   color: #fff0ef;
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .box-head {

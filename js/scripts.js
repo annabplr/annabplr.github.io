@@ -1,3 +1,5 @@
+// display div confirmation after sending message
+
 $('form[action^="https://usebasin.com"]').each(function(i,el){
   form = $(el);
   form.submit(function(e){
@@ -30,4 +32,12 @@ $('form[action^="https://usebasin.com"]').each(function(i,el){
       }
     });
   });
+});
+
+// display text when click on the div resume
+
+document.querySelectorAll(".resume-each").forEach((button) => {
+  button.addEventListener("click", (event) => {
+  event.currentTarget.querySelector('div.resume-hide').classList.toggle("resume-display");
+});
 });
