@@ -60,7 +60,8 @@ h4 {
   margin-bottom: 0px;
 }
 
-#page-content {
-  margin-top: 3px;
+.scrollmagic-pin-spacer {
+  width: 80vw;
+  height: 100vh;
 
 }
