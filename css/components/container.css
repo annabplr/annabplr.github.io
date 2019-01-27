@@ -42,10 +42,27 @@
 }
 
 .resume-div {
-  margin-top: 20vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+  width: 100%;
 
 }
 
+.resume-each {
+  height: 45vh;
+  width: 45vh;
+  margin: 20px;
+  background-size: contain;
+}
+
+.resume-each h3 {
+  filter: blur(0px);
+  background-color: transparent;
+  margin-left: 10px;
+  margin-right: 0px;
+  z-index: 3;
+
+}
 
 
 .form-line {
