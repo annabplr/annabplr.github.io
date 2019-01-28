@@ -64,3 +64,20 @@ a:hover {
   margin-left: 0px;
 }
 
+.blinking {
+
+  color: white;
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    color: transparent;
+  }
+}
+.social-links {
+  margin-top: 15vh !important;
+  margin-left: 10% !important;
+  width: 80%;
+  background-color: rgba(250, 250, 250, 0.3);
+}
