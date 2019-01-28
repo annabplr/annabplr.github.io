@@ -5,23 +5,28 @@
 @import url("components/links.css");
 
 body {
-  color: #605F5E;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ea9085;
+  color: #464849;
+  font-family: 'Roboto Mono', sans-serif;
+  background-color: #DC9D9C;
   margin-top: 0px;
 }
 
-h1, h2, h3 {
-  font-family: 'Imprima', sans-serif;
+h1, h2 {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+}
+
+h3, h4 {
+  font-family: 'Roboto Mono', sans-serif;
 }
 
 h1 {
-  background-color: #e2776a;
-  color: #F3F3F3;
+  background-color: #DC9D9C;
+  color: #FFFFFF;
   line-height: 0.3;
   letter-spacing: 3px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  padding-right: 75px;
+  padding-right: 60px;
   padding-bottom: 11px;
   margin-top: 20px;
   margin-right: 0px;
@@ -32,16 +37,16 @@ h2 {
   text-transform: lowercase;
   letter-spacing: 2px;
   margin-top: 0px;
-  font-weight: lighter;
+  font-size: 2.5vh;
   color: white;
 
 }
 
 h3 {
-  background-color: #ea9085;
-  color: #F3F3F3;
+  background-color: #DC9D9C;
+  color: #FFFFFF;
   letter-spacing: 2px;
-  font-weight: lighter;
+
   font-size: 2vh;
   padding-top: 0;
   padding-bottom: 0;
@@ -53,7 +58,7 @@ h3 {
 
 
 h4 {
-  color: #ea9085;
+  color: #DC9D9C;
   font-size: 1.3em;
   margin-top: 0px;
   margin-bottom: 0px;

@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0px;
 
-  background-color: #ea9085;
+  background-color: #DC9D9C;
 
   padding: 1px 1px 1px 1px;
   z-index: 9;
@@ -38,7 +38,7 @@
 }
 
 #navbar a:hover {
-  border-bottom: 4px solid #e2776a;
+  border-bottom: 4px solid #464849;
 }
 
 .back-to-the-top {
@@ -51,5 +51,5 @@
   z-index: 9;
 }
 .back-to-the-top a {
-  color: #ea9085;
+  color: #DC9D9C;
 }

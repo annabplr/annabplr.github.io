@@ -10,13 +10,13 @@
 }
 
 .light-gray {
-  background-color: #ffe3e0;
+  background-color: #D6D6D6;
 }
 
 .container h2 {
   text-align: left;
-  font-size: 2em;
-  color: #ea9085;
+  font-size: 3.5vh;
+  color: #DC9D9C;
 }
 
 #resume, #competences, #projects, #links {
@@ -57,14 +57,14 @@
   bottom: 3%;
   left: -1%;
   padding: 10px 20px;
-  color: #ea9085 ;
+  color: #DC9D9C ;
   background-color: white;
   border-radius: 2px;
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 0;
   z-index: 3;
-  font-size: 4vh;
+  font-size: 2.5vh;
 
 }
 
@@ -86,7 +86,7 @@
 .resume-hide h4 {
   font-size: 2vh;
   text-align: right;
-  color: #ea9085;
+  color: #DC9D9C;
 
 }
 
@@ -122,12 +122,13 @@ form h3 {
 textarea, input {
   box-shadow: 0;
   border: none;
+  border-radius: 2px;
   background-color: #ffe3e0;
-  color: #ea9085;
+  color: #DC9D9C;
   padding: 5px;
 }
 textarea::placeholder, input::placeholder {
-  color: #ea9085
+  color: #DC9D9C
 }
 
 button {
@@ -138,16 +139,16 @@ button {
   padding-bottom: 15px;
   box-shadow: none;
   border-style: none;
-  color: #ea9085;
-  border: 1px solid #ea9085;
+  color: #DC9D9C;
+  border: 1px solid #DC9D9C;
   text-transform: uppercase;
   margin-bottom: 30px;
   font-size: 1.5vh;
 }
 
 button:hover, button:active {
-  background-color: #ea9085;
-  border: 1px solid #ea9085;
+  background-color: #DC9D9C;
+  border: 1px solid #DC9D9C;
   color: white;
 }
 .contactform {
@@ -162,8 +163,8 @@ button:hover, button:active {
 }
 
 .form-done, .form-fail {
-  color: #ea9085;
-  background-color: #ea9085;
+  color: #DC9D9C;
+  background-color: #DC9D9C;
   position: absolute;
   top: 0;
   left: 0;
@@ -175,8 +176,8 @@ button:hover, button:active {
 
 .form-done p, .form-fail p {
   font-size: 1.5vh;
-  color: #ea9085;
-  border: 1px solid #ea9085;
+  color: #DC9D9C;
+  border: 1px solid #DC9D9C;
   background: white;
   padding: 15px 30px;
   border-radius: 2px;
@@ -202,7 +203,7 @@ button:hover, button:active {
   right: 2%;
   bottom: 12%;
   background-color: rgba(250,250,250,0.8);
-  border: 1px solid #ea9085;
+  border: 1px solid #DC9D9C;
 }
 
 .each-project:hover h3, .each-project:active h3 {
@@ -228,17 +229,21 @@ padding-right: 0;
   width: 100%;
   background-color: #ffe3e0;
   border-radius: 2px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
   display: none;
 }
 .details-projects h3 {
-  font-size: 3vh;
+  font-size: 2vh;
+  margin-top: 0;
   margin-left: 0;
   margin-right: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .details-projects h4 {
-  font-size: 1.7vh;
+  font-size: 1.6vh;
+  text-align: justify;
 
 }
 .display-projects {
@@ -255,7 +260,7 @@ padding-right: 0;
 }
 
 #competences li p {
-  background-color: #ea9085;
+  background-color: #DC9D9C;
   padding: 10px 20px;
   color: white;
   font-size: 1.5vh;
@@ -267,11 +272,10 @@ padding-right: 0;
 
 #competences h3 {
   background-color:white;
-  color: #ea9085;
+  color: #DC9D9C;
   text-align: center;
-  width: 80%;
+  width: 100%;
   padding-left: 0;
-  margin-left: 10%;
   border-radius: 2px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -279,11 +283,11 @@ padding-right: 0;
 
 #competences h4 {
   background-color:white;
-  color: #ea9085;
-  border: 1px solid #ea9085;
+  color: #DC9D9C;
+  border: 1px solid #DC9D9C;
   border-radius: 2px;
-  width: 60%;
-  margin-left: 30%;
+  width: 85%;
+  margin-left: 15%;
   padding: 10px 15px;
   margin-bottom: 3vh;
   text-align: justify;
@@ -300,13 +304,15 @@ padding-right: 0;
   margin-bottom: 3vh;
 }
 .comp-inprogress ul {
+  margin-left: 0 !important;
+  width: 100% !important;
   border-bottom: 3px solid white;
   margin-top: 1vh !important;
-  padding-bottom: 2vh !important;
+  padding-bottom: 1.5vh !important;
 }
 
 .comp-inprogress p {
-  background-color: rgba(234, 144, 133, 0.6) !important;
+  background-color: rgba(220, 157, 156, 0.6) !important;
   font-size: 1vh;
 
 }
