@@ -51,7 +51,7 @@
 }
 
 .resume-each:hover, .resume-each:active {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 
@@ -59,10 +59,11 @@
   text-transform: lowercase;
   position: absolute;
   bottom: 3%;
-  left: -1%;
+  right: -1%;
   padding: 10px 20px;
-  color: #DC9D9C ;
-  background-color: white;
+  background-color: transparent;
+  color: white;
+  border-bottom: 5px solid white;
   border-radius: 2px;
   margin-left: 0px;
   margin-right: 0px;
@@ -75,11 +76,12 @@
 .resume-hide {
   position: absolute;
   top: 30%;
-  right: 10%;
-  max-width: 60%;
+  left: 10%;
+  width: 60%;
   border-radius: 2px;
-  background-color: white;
-  padding: 20px;
+  background-color: rgba(70, 72, 73, 0.7);
+  border-bottom: 5px solid white;
+  padding: 10px;
   display: none;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
 
@@ -88,9 +90,9 @@
 
 
 .resume-hide h4 {
-  font-size: 2vh;
-  text-align: right;
-  color: #DC9D9C;
+  font-size: 1.8vh;
+  text-align: left;
+  color: white;
 
 }
 
@@ -215,19 +217,15 @@ button:hover, button:active {
 .each-project h3 {
   font-size: 2vh;
   left : auto;
-  right: 2%;
+  right: 0%;
   bottom: 12%;
-  background-color: rgba(214,214,214,0.8);
-  border: 1px solid #464849;
+
+  border-bottom: 5px solid white;
   color: white;
 }
 
-.each-project:hover h3, .each-project:active h3 {
-  background-color: #464849;
-}
-
 .each-project:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .all-projects {
@@ -239,30 +237,30 @@ padding-right: 0;
 }
 
 .details-projects {
-  padding: 1vh;
+  padding-bottom: 1vh;
   margin-left: 0;
   margin-top: 6vh;
   width: 100%;
-  background-color: #D6D6D6;
-  border-radius: 2px;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+
   display: none;
   position: relative;
   padding-bottom: 2vh;
+  border-bottom: 5px solid #DC9D9C;
 }
 .details-projects h3 {
   font-size: 2vh;
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .details-projects h4 {
   font-size: 1.6vh;
   text-align: justify;
   color: #464849;
+  padding: 5px;
 
 }
 .details-projects a {
@@ -303,6 +301,10 @@ padding-right: 0;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
 }
 
+.all-competences {
+  margin-bottom: 3vh;
+}
+
 #competences h3 {
   background-color:white;
   color: #464849;
@@ -313,18 +315,17 @@ padding-right: 0;
   padding-top: 2px;
   padding-bottom: 2px;
   text-transform: lowercase;
-  font-size: 1.8vh;
+  font-size: 1.5vh;
 }
 
 #competences h4 {
   background-color:white;
   color: #464849;
-  border: 1px solid #464849;
+  border-bottom: 5px solid #464849;
   border-radius: 2px;
-  width: 85%;
-  margin-left: 15%;
+  margin-top: 20px;
   padding: 10px 15px;
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
   text-align: justify;
   font-size: 1.5vh;
 }
@@ -334,9 +335,8 @@ padding-right: 0;
   border: 1px solid white;
 }
 .comp-inprogress {
-  width: 70%;
-  margin-left: 15%;
-  margin-bottom: 3vh;
+
+  margin-bottom: 1.5vh;
 }
 
 .comp-inprogress ul {
@@ -353,8 +353,8 @@ padding-right: 0;
   margin: 5px !important;
 }
 .comp-love h4 {
-  margin-left: 50% !important;
-  width: 50% !important;
+  margin-left: 25% !important;
+  width: 75% !important;
 }
 .comp-inprogress .comp-imp p {
   font-size: 1.5vh;
