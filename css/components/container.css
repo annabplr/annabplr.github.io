@@ -70,6 +70,10 @@
 
 }
 
+.resume-each:hover, .resume-each:active {
+  opacity: 0.7;
+}
+
 
 .resume-each h3 {
   text-transform: lowercase;
@@ -90,14 +94,17 @@
 
 .resume-hide {
   position: absolute;
-  bottom: 21%;
-  right: -1%;
+  top: 30%;
+  right: 10%;
   max-width: 80%;
-
+  border-radius: 2px;
   background-color: white;
-  padding: 10px;
+  padding: 20px;
   display: none;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
 }
+
+
 
 .resume-hide h4 {
   font-size: 2vh;
@@ -195,6 +202,23 @@ button:hover, button:active {
 .each-project {
   margin: 0;
 
+}
+
+.each-project h3 {
+  font-size: 2vh;
+  left : auto;
+  right: 2%;
+  bottom: 12%;
+  background-color: rgba(250,250,250,0.8);
+  border: 1px solid #ea9085;
+}
+
+.each-project:hover h3, .each-project:active h3 {
+  background-color: white;
+}
+
+.each-project:hover {
+  opacity: 0.7;
 }
 
 .all-projects {
