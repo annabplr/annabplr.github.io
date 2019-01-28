@@ -44,8 +44,8 @@
 .back-to-the-top {
   position: fixed;
   bottom: 4vh;
-  right: 0px;
-  font-size: 2em;
+  right: 2vh;
+  font-size: 3vh;
   color: white;
   padding: 10px;
   z-index: 9;
