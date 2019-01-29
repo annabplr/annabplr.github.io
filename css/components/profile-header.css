@@ -45,7 +45,7 @@
 }
 
 .button-more {
-  z-index: 1550;
+  z-index: 100;
   margin-top: 80px;
   text-align: right;
 }
