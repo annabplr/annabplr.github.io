@@ -30,15 +30,16 @@
 }
 
 #navbar a {
+  text-decoration: none;
   color: white;
-  padding-bottom: 12px;
+  padding-bottom: 0.6vh;
   text-transform: lowercase;
   font-weight: light;
   letter-spacing: 2px;
 }
 
-#navbar a:hover {
-  border-bottom: 4px solid #464849;
+#navbar a:hover, #navbar a:active {
+  border-bottom: 4px solid white;
 }
 
 .back-to-the-top {
