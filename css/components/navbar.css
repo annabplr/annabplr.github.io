@@ -5,7 +5,7 @@
   background-color: #DC9D9C;
 
   padding: 1px 1px 1px 1px;
-  z-index: 9;
+  z-index: 1500;
   border: 0;
   width: 100%;
 }
@@ -48,7 +48,7 @@
   font-size: 3vh;
   color: white;
   padding: 10px;
-  z-index: 9;
+  z-index: 2000;
 }
 .back-to-the-top a {
   color: #DC9D9C;
