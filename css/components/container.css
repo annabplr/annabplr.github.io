@@ -16,7 +16,7 @@ z-index:1000;
 }
 
 .panel-moving {
-  margin-top:100%;
+  margin-top:100vh;
 }
 .white {
   background-color: white;
