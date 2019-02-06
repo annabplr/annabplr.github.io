@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr-FR" prefix="og: http://ogp.me/ns#" class="no-js">
 <head>
+  <?php header("Access-Control-Allow-Origin: *"); ?>
+
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
@@ -39,32 +41,18 @@
 <link rel='stylesheet' id='wp-block-library-css' href='https://www.georges.tech/wp-includes/css/dist/block-library/style.min.css?ver=5.0.3' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap.min-css' href='https://www.georges.tech/wp-content/themes/georges/css/bootstrap.min.css?ver=3.2' type='text/css' media='all' />
 <link rel='stylesheet' id='js_composer_front-css' href='https://www.georges.tech/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.6' type='text/css' media='all' />
-<link rel="stylesheet" type="text/css" href="georges/stylegeorges.css">
 <script type='text/javascript' src='https://www.georges.tech/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript' src='https://www.georges.tech/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto+Mono:400,700" rel="stylesheet">
+
 <style type="text/css">
-@font-face {
-font-family: 'CircularStd';
-font-style: normal;
-font-weight: normal;
-src: url(./georges/fonts/CircularStd-Black.woff);
-}
 
-
-
-
-body {
-  font-style: "CircularStd" !important;
-  background-color: red !important;
-}
-#vc_heading {
-  font-style: 'CircularStd' !important;
-}
 
 .recentcomments a{display:inline!important;padding:0!important;margin:0!important}</style>
 <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
 <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.georges.tech/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><noscript><style type="text/css">.wpb_animate_when_almost_visible{opacity:1}</style></noscript> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-<link href="https://www.georges.tech/wp-content/themes/georges/css/app.8d53f4d0.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="georges/stylegeorge.css">
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -169,7 +157,7 @@ CMO & Cofondateur
 <img width="150" height="150" src="https://www.georges.tech/wp-content/uploads/benjamin-thimonier-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="&lt;span  &gt;Benjamin Thimonier&lt;/span&gt;" data-pagespeed-url-hash="3792141305" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 </div>
 <div class="card-title">
-<h3><span>Benjamin Thimonier</span></h3>
+<h3><span style="font-size: 18px;">Benjamin Thimonier</span></h3>
 </div>
 <div class="card-description">
 <p>
@@ -432,6 +420,32 @@ Business developer
 </div>
 </div>
 </div>
+
+<div class="card-item">
+<div class="card card-user card--no-border card--padding-sm">
+<div class="card-inner card-inner--column">
+<div class="card-image card-image--big">
+<img width="150" height="150" src="images/profile_pic.jpg" class="vc_single_image-img attachment-thumbnail" alt="&lt;span  &gt;Mathieu Stanowski&lt;/span&gt;" data-pagespeed-url-hash="1464543083" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="card-title">
+<h3><a href="https://annadev.com" target="_blank"><span style="color:#3a455b">Annabelle PELLIER</span></a></h3>
+</div>
+<div class="card-description">
+<p>
+<span>JS Full Stack Developer</span>
+</p>
+</div>
+<div class="card-links">
+<p>
+<a class="linkedin" href="https://www.linkedin.com/in/apellier/" target="_blank">
+<i class="fab fa-linkedin"></i>
+ </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
 <div class="card-item">
 <div class="card card-user card--no-border card--padding-sm">
 <div class="card-inner card-inner--column">
@@ -504,31 +518,7 @@ Business developer
 </div>
 </div>
 </div>
-<div class="card-item">
-<div class="card card-user card--no-border card--padding-sm">
-<div class="card-inner card-inner--column">
-<div class="card-image card-image--big">
-<img width="150" height="150" src="https://www.georges.tech/wp-content/uploads/romain-koenig-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="&lt;span  &gt;Romain Koenig&lt;/span&gt;" data-pagespeed-url-hash="2890708638" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-</div>
-<div class="card-title">
-<h3><span>Romain Koenig</span></h3>
-</div>
-<div class="card-description">
-<p>
-<span>Tech & Cofondateur</span>
-</p>
-</div>
-<div class="card-links">
-<p>
-<a class="linkedin" href="https://www.linkedin.com/in/romain-koenig-502b854a/" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
- </p>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 
 </div>
 </div>
@@ -565,6 +555,31 @@ Chargé de satisfaction client
 <div class="card card-user card--no-border card--padding-sm">
 <div class="card-inner card-inner--column">
 <div class="card-image card-image--big">
+<img width="150" height="150" src="https://www.georges.tech/wp-content/uploads/romain-koenig-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="&lt;span  &gt;Romain Koenig&lt;/span&gt;" data-pagespeed-url-hash="2890708638" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="card-title">
+<h3><span>Romain Koenig</span></h3>
+</div>
+<div class="card-description">
+<p>
+<span>Tech & Cofondateur</span>
+</p>
+</div>
+<div class="card-links">
+<p>
+<a class="linkedin" href="https://www.linkedin.com/in/romain-koenig-502b854a/" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+ </p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card-item">
+<div class="card card-user card--no-border card--padding-sm">
+<div class="card-inner card-inner--column">
+<div class="card-image card-image--big">
 <img width="150" height="150" src="https://www.georges.tech/wp-content/uploads/valentine-flehoc-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="&lt;span  &gt;Valentine Flehoc&lt;/span&gt;" data-pagespeed-url-hash="3046586528" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 </div>
 <div class="card-title">
@@ -586,21 +601,21 @@ Chargé de satisfaction client
 </div>
 </div>
 </div>
-
+</div>
 </div>
 </div>
 </div></div></section><section class="vc_section section__try"><div class="wpb_row vc_row-fluid standard-section section  section-no-parallax  stretch   " data-speed="1" style=""><div class="col span_12 color-dark left">
 <div class="vc_col-sm-8 wpb_column column_container col no-padding color-dark" style="" data-animation="" data-delay="">
 <div class="wpb_wrapper">
-<h2 style="text-align: left" class="vc_custom_heading title--heading-1">Prêt à vous lancer ?</h2><h2 style="text-align: left" class="vc_custom_heading">Contactez-nous, ou créez un compte.</h2>
+<h2 style="text-align: left" class="vc_custom_heading title--heading-1">Prêts à me recruter ?</h2><a href="mailto:hello@annadev.com"><h2 style="text-align: left; color: white; width: 350px; font-style: Karla !important" class="vc_custom_heading">Contactez-moi ! <i class="far fa-grin"></i></h2></a>
 </div>
 </div>
 <div class="vc_col-sm-4 wpb_column column_container col no-padding color-dark" style="" data-animation="" data-delay="">
 <div class="wpb_wrapper">
 <div class="wpb_raw_code wpb_content_element wpb_raw_html">
 <div class="wpb_wrapper">
-<a class="btn btn-lg m-b-lg btn-darken m-l-sm m-r-sm" href="https://app.georges.tech/inscription" target="_blank" role="button">
-<span>Essai gratuit</span>
+<a class="btn btn-lg m-b-lg btn-darken m-l-sm m-r-sm" href="https://annadev.com" target="_blank" role="button">
+<span>Mon portfolio</span>
 </a>
 </div>
 </div>
