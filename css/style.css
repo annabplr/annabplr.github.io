@@ -13,6 +13,7 @@ html, body {
   color: #464849;
   font-family: 'Roboto Mono', sans-serif;
   background-color: #DC9D9C;
+  scroll-behavior: smooth;
 }
 
 #page-content {
