@@ -6,25 +6,26 @@
     <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0" />
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-    <title>Minimal Notes</title>
+    
+    <title>notes minimalistes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
     <link rel="icon" sizes="192x192" href="icon.png">
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-        body {
+        .mininotes {
             font-family: "Montserrat";
             /* font: 14px/1.6'Avenir', Helvetica, Arial, sans-serif; */
         }
-        i {
+        .mininotes i {
             font-size: 12px;
             clear: both;
             font-style: normal;
             display: block;
         }
-        h2 {
+        .mininotes h2 {
             margin: 10px
         }
         #app {
@@ -47,24 +48,24 @@
             border: 1px solid #ccc;
         }
 
-        textarea {
+        .mininotes textarea {
             display: block;
             width: 200px;
             padding: 8px;
             margin: 10px;
             border: 1px solid #ccc;
         }
-        textarea:focus {
+        .mininotes textarea:focus {
             border-color: black;
         }
-        button {
+        .mininotes button {
             padding: 0;
             cursor: pointer;
             background: transparent;
             border: 0;
             -webkit-appearance: none;
         }
-        .button {
+        .mininotes .button {
             display: block;
             box-sizing: content-box;
             width: 200px;
@@ -74,12 +75,12 @@
             cursor: pointer;
             clear: both;
         }
-        .button:hover {
+        .mininotes .button:hover {
             background-color: black;
             color: white;
             border-color: black;
         }
-        .top {
+        .mininotes .top {
             text-align: right;
             display: flex;
             flex-direction: row-reverse;
@@ -87,7 +88,7 @@
             margin-bottom: 0.5em;
         }
 
-        .close {
+        .mininotes .close {
             text-align: right;
             height: 10px;
             width: 10px;
@@ -96,7 +97,7 @@
             line-height: 10px;
             display: inline-block;
         }
-        .close:before, .close:after {
+        .mininotes .close:before, .mininotes .close:after {
             transform: rotate(-45deg);
             content: "";
             position: absolute;
@@ -110,61 +111,102 @@
             background-color: black;
             transition: all 0.25s ease-out;
         }
-        .close:after {
+        .mininotes .close:after {
             transform: rotate(-135deg);
         }
-        .close:hover:before, .close:hover:after {
+        .mininotes .close:hover:before, .mininotes .close:hover:after {
             transform: rotate(0deg);
         }
+        #app .old-notes-button {
+          text-align: right;
+          font-size: 0.7rem;
+        }
+        .mininotes .archive {
+          bottom: 6px;
+          right: 8px;
+          position: absolute;
+        }
+
 
 
     </style>
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="mininotes">
 
         <h2>{{title}}</h2>
 
-        <textarea autofocus placeholder="insert your note .." v-model="note.text"></textarea>
+        <textarea autofocus placeholder="crée ta note" v-model="note.text"></textarea>
 
-        <button class="button" @click="addNote">Submit</button>
+        <button class="button" @click="addNote">enregistrer</button>
 
-        <div v-for="(note, index) in notes">
+        <div v-for="(note, index) in notes" v-if="note.old != true">
             <div class ="top">
                 <button class="close" @click="removeNote(index)"></button>
                 <i>{{note.date}}</i>
             </div>
-            {{note.text}}
+            <div class="checkbox" v-if="note.checked" @click="uncheckNote(index)"><del>{{note.text}}</del></div>
+            <div class="checkbox" v-else @click="checkNote(index)">{{note.text}}</div>
+            <button class="archive" @click="oldNote(index)"><i class="fas fa-archive"></i></button>
+        </div>
+        <button class="old-notes-button" @click="showOld ^= true">archivées</button>
+        <div v-for="(note, index) in notes" v-if="note.old == true" v-show="showOld" >
+            <div class ="top">
+                <button class="close" @click="removeNote(index)"></button>
+                <i>{{note.date}}</i>
+            </div>
+            <div class="checkbox checked" v-if="note.checked" @click="uncheckNote(index)"><del>{{note.text}}</del></div>
+            <div class="checkbox" v-else @click="checkNote(index)">{{note.text}}</div>
+            <button class="archive" @click="unoldNote(index)"><i class="fas fa-archive"></i></button>
         </div>
     </div>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                title: 'Minimal Notes',
+                title: 'notes',
+                showOld: false,
                 note: {
                     text: '',
-                    date: ''
+                    date: '',
+                    checked: false,
+                    old: false
                 },
                 notes: [{
-                    text: 'Minimal Notes',
-                    date: new Date(Date.now()).toLocaleString()
+                    text: 'notes minimalistes',
+                    date: new Date(Date.now()).toLocaleString(),
+                    checked: false
                 }]
             },
             methods: {
                 addNote() {
                     let {
-                        text, title, color
+                        text, title, color, checked, old
                     } = this.note
                     this.notes.push({
                         text,
                         date: new Date(Date.now()).toLocaleString(),
+                        checked: checked,
+                        old: old
                     })
                 },
                 removeNote(index) {
                     this.$delete(this.notes, index)
                 },
+                checkNote(index) {
+                  this.notes[index].checked = true
+                },
+                uncheckNote(index) {
+                  this.notes[index].checked = false
+                },
+                oldNote(index) {
+                  this.notes[index].old = true
+                },
+                unoldNote(index) {
+                  this.notes[index].old = false
+                }
+
 
             },
             mounted() {
