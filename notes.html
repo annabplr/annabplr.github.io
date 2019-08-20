@@ -1,227 +1,238 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0" />
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    
-    <title>notes minimalistes</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="icon" sizes="192x192" href="icon.png">
+      <title>notes minimalistes</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+      <link rel="icon" sizes="192x192" href="icon.png">
 
-        .mininotes {
-            font-family: "Montserrat";
-            /* font: 14px/1.6'Avenir', Helvetica, Arial, sans-serif; */
-        }
-        .mininotes i {
-            font-size: 12px;
-            clear: both;
-            font-style: normal;
-            display: block;
-        }
-        .mininotes h2 {
-            margin: 10px
-        }
-        #app {
-            display: flex;
-            flex-flow: column wrap;
-            margin: 0 auto;
-            height: 600px;
-            justify-content: flex-start;
-            align-content: flex-start;
-        }
-        #app > * {
-            border-radius: 2px;
-            transition: all ease 0.3s;
-        }
-        #app>div {
-            position: relative;
-            width: 200px;
-            padding: 8px;
-            margin: 10px;
-            border: 1px solid #ccc;
-        }
+      <style>
+          @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-        .mininotes textarea {
-            display: block;
-            width: 200px;
-            padding: 8px;
-            margin: 10px;
-            border: 1px solid #ccc;
-        }
-        .mininotes textarea:focus {
-            border-color: black;
-        }
-        .mininotes button {
-            padding: 0;
-            cursor: pointer;
-            background: transparent;
-            border: 0;
-            -webkit-appearance: none;
-        }
-        .mininotes .button {
-            display: block;
-            box-sizing: content-box;
-            width: 200px;
-            padding: 8px;
-            margin: 0 10px 20px 10px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            clear: both;
-        }
-        .mininotes .button:hover {
-            background-color: black;
-            color: white;
-            border-color: black;
-        }
-        .mininotes .top {
+          .mininotes {
+              font-family: "Montserrat";
+              /* font: 14px/1.6'Avenir', Helvetica, Arial, sans-serif; */
+              width: 95%;
+              margin-left: 5%;
+          }
+          .mininotes i {
+              font-size: 12px;
+              clear: both;
+              font-style: normal;
+              display: block;
+          }
+          .mininotes h2 {
+              margin: 10px
+          }
+          #app {
+              margin: 0 auto;
+          }
+          #app > * {
+              border-radius: 2px;
+              transition: all ease 0.3s;
+          }
+          #app>.row>div {
+              position: relative;
+              padding: 8px;
+              margin: 10px;
+              border: 1px solid #ccc;
+          }
+
+          .mininotes textarea {
+              display: block;
+              padding: 8px;
+              margin: 10px;
+              border: 1px solid #ccc;
+          }
+          .mininotes textarea:focus {
+              border-color: black;
+          }
+          .mininotes button {
+              padding: 0;
+              cursor: pointer;
+              background: transparent;
+              border: 0;
+              -webkit-appearance: none;
+          }
+          .mininotes .button {
+              display: block;
+              box-sizing: content-box;
+              padding: 8px;
+              margin: 0 10px 20px 10px;
+              cursor: pointer;
+              clear: both;
+          }
+          .mininotes .button:hover {
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.5s ease-out;
+          }
+          .mininotes .top {
+              text-align: right;
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: space-between;
+              margin-bottom: 0.5em;
+          }
+
+          .mininotes .close {
+              text-align: right;
+              height: 10px;
+              width: 10px;
+              position: relative;
+              box-sizing: border-box;
+              line-height: 10px;
+              display: inline-block;
+          }
+          .mininotes .close:before, .mininotes .close:after {
+              transform: rotate(-45deg);
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-top: -1px;
+              margin-left: -5px;
+              display: block;
+              height: 2px;
+              width: 10px;
+              background-color: black;
+              transition: all 0.25s ease-out;
+          }
+          .mininotes .close:after {
+              transform: rotate(-135deg);
+          }
+          .mininotes .close:hover:before, .mininotes .close:hover:after {
+              transform: rotate(0deg);
+          }
+          #app .old-notes-button {
             text-align: right;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            margin-bottom: 0.5em;
-        }
-
-        .mininotes .close {
-            text-align: right;
-            height: 10px;
-            width: 10px;
-            position: relative;
-            box-sizing: border-box;
-            line-height: 10px;
-            display: inline-block;
-        }
-        .mininotes .close:before, .mininotes .close:after {
-            transform: rotate(-45deg);
-            content: "";
+            font-size: 0.9rem;
+          }
+          .mininotes .archive {
+            bottom: 6px;
+            right: 8px;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-top: -1px;
-            margin-left: -5px;
-            display: block;
-            height: 2px;
-            width: 10px;
-            background-color: black;
-            transition: all 0.25s ease-out;
-        }
-        .mininotes .close:after {
-            transform: rotate(-135deg);
-        }
-        .mininotes .close:hover:before, .mininotes .close:hover:after {
-            transform: rotate(0deg);
-        }
-        #app .old-notes-button {
-          text-align: right;
-          font-size: 0.7rem;
-        }
-        .mininotes .archive {
-          bottom: 6px;
-          right: 8px;
-          position: absolute;
-        }
+            color: #ccc;
+          }
+          .mininotes .archive:hover {
+            color: #707070;
+          }
+          #app .row .form-div {
+            border: none;
+          }
+
+          .mininotes .old-note {
+            background-color: #F5F5F5;
+            opacity: 0.8;
+          }
 
 
 
-    </style>
-</head>
+      </style>
+  </head>
 
-<body>
+  <body>
     <div id="app" class="mininotes">
-
-        <h2>{{title}}</h2>
-
-        <textarea autofocus placeholder="crée ta note" v-model="note.text"></textarea>
-
-        <button class="button" @click="addNote">enregistrer</button>
-
-        <div v-for="(note, index) in notes" v-if="note.old != true">
-            <div class ="top">
-                <button class="close" @click="removeNote(index)"></button>
-                <i>{{note.date}}</i>
-            </div>
-            <div class="checkbox" v-if="note.checked" @click="uncheckNote(index)"><del>{{note.text}}</del></div>
-            <div class="checkbox" v-else @click="checkNote(index)">{{note.text}}</div>
-            <button class="archive" @click="oldNote(index)"><i class="fas fa-archive"></i></button>
+      <div class="row">
+        <div class="col-xs-12 col-md-4 form-div row">
+          <h2>{{title}}</h2>
+          <textarea class="col-xs-12" autofocus placeholder="créer une note" v-model="note.text"></textarea>
+          <button class="button col-xs-12" @click="addNote">enregistrer</button>
         </div>
-        <button class="old-notes-button" @click="showOld ^= true">archivées</button>
-        <div v-for="(note, index) in notes" v-if="note.old == true" v-show="showOld" >
-            <div class ="top">
-                <button class="close" @click="removeNote(index)"></button>
-                <i>{{note.date}}</i>
-            </div>
-            <div class="checkbox checked" v-if="note.checked" @click="uncheckNote(index)"><del>{{note.text}}</del></div>
-            <div class="checkbox" v-else @click="checkNote(index)">{{note.text}}</div>
-            <button class="archive" @click="unoldNote(index)"><i class="fas fa-archive"></i></button>
+        <div v-for="(note, index) in notes" v-if="note.old != true" class="col-xs-12 col-md-2">
+          <div class ="top">
+            <button class="close" @click="removeNote(index)"></button>
+            <i>{{note.date}}</i>
+          </div>
+          <div class="checkbox" v-if="note.checked" @click="uncheckNote(index)"><del>{{note.text}}</del></div>
+          <div class="checkbox" v-else @click="checkNote(index)">{{note.text}}</div>
+          <button class="archive" @click="oldNote(index)"><i class="fas fa-archive"></i></button>
         </div>
+        <button class="old-notes-button col-xs-offset-6 col-xs-3" @click="showOld ^= true">archivées</button>
+      </div>
+      <div class="row">
+        <div v-for="(note, index) in notes" v-if="note.old == true" v-show="showOld" class="col-xs-12 col-md-2 old-note">
+          <div class ="top">
+            <button class="close" @click="removeNote(index)"></button>
+            <i>{{note.date}}</i>
+          </div>
+          <div class="checkbox checked" v-if="note.checked" @click="uncheckNote(index)"><del>{{note.text}}</del></div>
+          <div class="checkbox" v-else @click="checkNote(index)">{{note.text}}</div>
+          <button class="archive" @click="unoldNote(index)"><i class="fas fa-archive"></i></button>
+        </div>
+      </div>
     </div>
     <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                title: 'notes',
-                showOld: false,
-                note: {
-                    text: '',
-                    date: '',
-                    checked: false,
-                    old: false
-                },
-                notes: [{
-                    text: 'notes minimalistes',
-                    date: new Date(Date.now()).toLocaleString(),
-                    checked: false
-                }]
-            },
-            methods: {
-                addNote() {
-                    let {
-                        text, title, color, checked, old
-                    } = this.note
-                    this.notes.push({
-                        text,
-                        date: new Date(Date.now()).toLocaleString(),
-                        checked: checked,
-                        old: old
-                    })
-                },
-                removeNote(index) {
-                    this.$delete(this.notes, index)
-                },
-                checkNote(index) {
-                  this.notes[index].checked = true
-                },
-                uncheckNote(index) {
-                  this.notes[index].checked = false
-                },
-                oldNote(index) {
-                  this.notes[index].old = true
-                },
-                unoldNote(index) {
-                  this.notes[index].old = false
-                }
+      var app = new Vue({
+        el: '#app',
+        data: {
+          title: 'notes',
+          showOld: false,
+          note: {
+            text: '',
+            date: '',
+            checked: false,
+            old: false
+          },
+          notes: [{
+            text: 'notes minimalistes',
+            date: new Date(Date.now()).toLocaleString(),
+            checked: false
+          }]
+        },
+        methods: {
+          addNote() {
+            let {
+              text, title, color, checked, old
+            } = this.note
+            this.notes.push({
+              text,
+              date: new Date(Date.now()).toLocaleString(),
+              checked: checked,
+              old: old
+            })
+          },
+          removeNote(index) {
+            this.$delete(this.notes, index)
+          },
+          checkNote(index) {
+            this.notes[index].checked = true
+            this.notes[index].old = true
+          },
+          uncheckNote(index) {
+            this.notes[index].checked = false
+            this.notes[index].old = false
 
-
+          },
+          oldNote(index) {
+            this.notes[index].old = true
+          },
+          unoldNote(index) {
+            this.notes[index].old = false
+          }
+        },
+        mounted() {
+          if (localStorage.getItem('notes')) this.notes = JSON.parse(localStorage.getItem('notes'));
+        },
+        watch: {
+          notes: {
+            handler() {
+              localStorage.setItem('notes', JSON.stringify(this.notes));
             },
-            mounted() {
-                if (localStorage.getItem('notes')) this.notes = JSON.parse(localStorage.getItem('notes'));
-            },
-            watch: {
-                notes: {
-                    handler() {
-                        localStorage.setItem('notes', JSON.stringify(this.notes));
-                    },
-                    deep: true,
-                },
-            }
-        })
+            deep: true,
+          },
+        }
+      })
     </script>
-</body>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
 
 </html>
