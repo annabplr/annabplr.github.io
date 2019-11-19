@@ -188,8 +188,16 @@ button:hover, button:active {
   background: white;
   min-height: 30vh;
   border-radius: 2px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.contactform h3 {
+  margin-bottom: 5rem;
+}
 
+.contactform h4 {
+  color: #464849
 }
 
 .form-done, .form-fail {
@@ -224,7 +232,7 @@ button:hover, button:active {
 
 .each-project {
   margin: 0;
-
+  position: relative;
 }
 
 .each-project h3 {
@@ -232,8 +240,8 @@ button:hover, button:active {
   left : auto;
   right: 0%;
   bottom: 12%;
-
-  border-bottom: 5px solid white;
+  text-align: right;
+  border-bottom: 3px solid white;
   color: white;
 }
 
@@ -246,19 +254,17 @@ padding-left: 0;
 padding-right: 0;
 }
 #projects h2 {
-  margin-bottom: 15%;
+  margin-bottom: 3vh;
 }
 
 .details-projects {
-  padding-bottom: 1vh;
-  margin-left: 0;
-  margin-top: 6vh;
-  width: 100%;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  background-color: rgba(0, 0, 0, .7 );
 
+  width: 80%;
   display: none;
-  position: relative;
-  padding-bottom: 2vh;
-  border-bottom: 5px solid #DC9D9C;
 }
 .details-projects h3 {
   font-size: 2vh;
@@ -270,9 +276,9 @@ padding-right: 0;
 }
 
 .details-projects h4 {
-  font-size: 1.6vh;
+  font-size: 1.5rem;
   text-align: justify;
-  color: #464849;
+  color: white;
   padding: 5px;
 
 }
@@ -306,7 +312,7 @@ padding-right: 0;
 
 #competences li p {
   background-color: #DC9D9C;
-  padding: 10px 20px;
+  padding: 20px 20px;
   color: white;
   font-size: 1.5vh;
   border-radius: 2px;
@@ -344,9 +350,11 @@ padding-right: 0;
   font-size: 1.5vh;
 }
 .comp-imp {
+  background-color: white !important;
+  color: #DC9D9C !important;
   font-size: 1.8vh !important;
   font-weight: bold;
-  border: 1px solid white;
+  border-bottom: 3px solid #DC9D9C;
 }
 .comp-inprogress {
 

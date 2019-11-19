@@ -46,6 +46,8 @@ document.querySelectorAll(".resume-each").forEach((button) => {
 
 document.querySelector(".terracognita").
   addEventListener("click", (event) => {
+    document.querySelector('.detail-pozi').classList.remove("display-projects");
+    document.querySelector('.detail-mininotes').classList.remove("display-projects");
     document.querySelector('.detail-batchka').classList.remove("display-projects");
     document.querySelector('.detail-joliesdates').classList.remove("display-projects");
     document.querySelector('.detail-lapioche').classList.remove("display-projects");
@@ -54,6 +56,8 @@ document.querySelector(".terracognita").
 
 document.querySelector(".batchka").
   addEventListener("click", (event) => {
+    document.querySelector('.detail-pozi').classList.remove("display-projects");
+    document.querySelector('.detail-mininotes').classList.remove("display-projects");
     document.querySelector('.detail-terracognita').classList.remove("display-projects");
     document.querySelector('.detail-joliesdates').classList.remove("display-projects");
     document.querySelector('.detail-lapioche').classList.remove("display-projects");
@@ -62,6 +66,8 @@ document.querySelector(".batchka").
 
 document.querySelector(".joliesdates").
   addEventListener("click", (event) => {
+    document.querySelector('.detail-pozi').classList.remove("display-projects");
+    document.querySelector('.detail-mininotes').classList.remove("display-projects");
     document.querySelector('.detail-batchka').classList.remove("display-projects");
     document.querySelector('.detail-terracognita').classList.remove("display-projects");
     document.querySelector('.detail-lapioche').classList.remove("display-projects");
@@ -70,10 +76,32 @@ document.querySelector(".joliesdates").
 
 document.querySelector(".lapioche").
   addEventListener("click", (event) => {
+    document.querySelector('.detail-pozi').classList.remove("display-projects");
+    document.querySelector('.detail-mininotes').classList.remove("display-projects");
     document.querySelector('.detail-batchka').classList.remove("display-projects");
     document.querySelector('.detail-joliesdates').classList.remove("display-projects");
     document.querySelector('.detail-terracognita').classList.remove("display-projects");
   document.querySelector('.detail-lapioche').classList.toggle("display-projects");
+});
+
+document.querySelector(".pozi").
+  addEventListener("click", (event) => {
+    document.querySelector('.detail-pozi').classList.toggle("display-projects");
+    document.querySelector('.detail-mininotes').classList.remove("display-projects");
+    document.querySelector('.detail-batchka').classList.remove("display-projects");
+    document.querySelector('.detail-joliesdates').classList.remove("display-projects");
+    document.querySelector('.detail-terracognita').classList.remove("display-projects");
+  document.querySelector('.detail-lapioche').classList.remove("display-projects");
+});
+
+document.querySelector(".mininote").
+  addEventListener("click", (event) => {
+    document.querySelector('.detail-pozi').classList.remove("display-projects");
+    document.querySelector('.detail-mininotes').classList.toggle("display-projects");
+    document.querySelector('.detail-batchka').classList.remove("display-projects");
+    document.querySelector('.detail-joliesdates').classList.remove("display-projects");
+    document.querySelector('.detail-terracognita').classList.remove("display-projects");
+  document.querySelector('.detail-lapioche').classList.remove("display-projects");
 });
 
 // scroll effect when clicking on the link
@@ -86,4 +114,3 @@ $(document).ready(function() {
       return false;
     });
   });
-
