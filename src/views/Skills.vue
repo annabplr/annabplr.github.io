@@ -1,8 +1,7 @@
 <template>
-  <div class="LandingPage">
-    <h1>{{ $t('hello') }}</h1>
-    <h2>{{ $t('job') }}</h2>
-    <h2>{{ $t('place') }}</h2>
+  <div class="Skills">
+    COUCOU
+    SKILLLLLLLLLLLLLLLLL
   </div>
 </template>
 
@@ -24,15 +23,15 @@
 
 <script>
 export default {
-  name: 'LandingPage',
-  props: {
-    msg: String
-  }
+  name: 'Skills',
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+img {
+  width: 150px;
+}
 h3 {
   margin: 40px 0 0;
 }

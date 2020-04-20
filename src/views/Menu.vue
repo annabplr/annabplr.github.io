@@ -1,12 +1,13 @@
 <template>
   <div class="menu">
     <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">{{ $t('top') }}</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">{{ $t('summary') }}</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">{{ $t('skills') }}</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">{{ $t('projects') }}</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">{{ $t('contact') }}</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">{{ $t('resume') }}</a></li>
+      <li><router-link to="/">{{ $t('top') }} </router-link></li>
+
+      <li><router-link to="/resume">{{ $t('summary') }}</router-link></li>
+      <li><router-link to="/competences">{{ $t('skills') }}</router-link></li>
+      <li><router-link to="/projets">{{ $t('projects') }}</router-link></li>
+      <li><router-link to="/contact">{{ $t('contact') }}</router-link></li>
+      <li><router-link to="/">{{ $t('resume') }}</router-link></li>
     </ul>
   </div>
 </template>
@@ -42,9 +43,6 @@ export default {
   name: 'Menu',
   components: {
   },
-  props: {
-    msg: String
-  }
 }
 </script>
 

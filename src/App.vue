@@ -1,21 +1,19 @@
 <template>
   <div id="app">
-    <LandingPage/>
+    <router-view/>
     <Menu/>
     <Locale/>
   </div>
 </template>
 
 <script>
-import LandingPage from './components/LandingPage.vue'
-import Menu from './components/Menu.vue'
-import Locale from './components/Locale.vue'
+import Menu from './views/Menu.vue'
+import Locale from './views/Locale.vue'
 
 
 export default {
   name: 'App',
   components: {
-    LandingPage,
     Menu,
     Locale
   }
@@ -29,6 +27,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
