@@ -2,7 +2,6 @@
   <div class="menu">
     <ul>
       <li><router-link to="/">{{ $t('top') }} </router-link></li>
-
       <li><router-link to="/resume">{{ $t('summary') }}</router-link></li>
       <li><router-link to="/competences">{{ $t('skills') }}</router-link></li>
       <li><router-link to="/projets">{{ $t('projects') }}</router-link></li>
