@@ -1,3 +1,11 @@
 module.exports = {
-  publicPath: "/"
+  publicPath: "/",
+
+  pluginOptions: {
+    i18n: {
+      locale: 'fr',
+      fallbackLocale: 'en',
+      enableInSFC: true
+    }
+  }
 };

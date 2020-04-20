@@ -1,10 +1,26 @@
 <template>
   <div class="LandingPage">
-    <h1>hello, je m'appelle annabelle PELLIER</h1>
-    <h2>et je suis développeuse web full-stack</h2>
-    <h3>à Genève</h3>
+    <h1>{{ $t('hello') }}</h1>
+    <h2>{{ $t('job') }}</h2>
+    <h2>{{ $t('place') }}</h2>
   </div>
 </template>
+
+<i18n>
+{
+  "fr": {
+    "hello": "hello, je m'appelle annabelle PELLIER,",
+    "job":"et je suis développeuse web full-stack",
+    "place":"à Genève"
+  },
+  "en": {
+    "hello": "hi, I'm annabelle PELLIER,",
+    "job":"and I'm a full-stack  web developer",
+    "place":"in Geneva"
+  }
+}
+</i18n>
+
 
 <script>
 export default {

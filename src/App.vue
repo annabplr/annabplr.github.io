@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    coucou
-    <LandingPage msg="hello, je m'appelle Annabelle"/>
+    <LandingPage/>
     <Menu/>
+    <Locale/>
   </div>
 </template>
 
 <script>
 import LandingPage from './components/LandingPage.vue'
 import Menu from './components/Menu.vue'
+import Locale from './components/Locale.vue'
 
 
 export default {
   name: 'App',
   components: {
     LandingPage,
-    Menu
+    Menu,
+    Locale
   }
 }
 </script>
