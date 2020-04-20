@@ -1,9 +1,10 @@
 <template>
   <div id="app" class='app'>
-    <div class="app--view">
-      <router-view/>
-    </div>
+    <router-view class="app--view" />
     <div class="app--menu">
+      <div class="wip">
+        EN COURS DE MISE A JOUR
+      </div>
       <Menu/>
       <Locale/>
     </div>
@@ -25,8 +26,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/_variables.scss";
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: $font-light;
+  background-color: $main-dark;
+  z-index: -1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -35,18 +43,30 @@ export default {
 }
 .app {
   min-height: 100vh;
+  .wip {
+    position: relative;
+    right: 2rem;
+    top: 0rem;
+    padding: 2rem;
+    transform: rotate(25deg);
+    background-color: $main-darker;
+    color: $second-light;
+  }
   &--view {
     width: 85%;
-    border: 3px solid green
-
   }
   &--menu {
+    position: relative;
     width: 15%;
-    border: 3px solid blue
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
-
-}
-.menu {
-  border: 1px solid red;
 }
 </style>
