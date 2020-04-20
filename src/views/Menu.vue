@@ -1,12 +1,12 @@
 <template>
   <div class="menu">
-    <ul>
-      <li><router-link to="/">{{ $t('top') }} </router-link></li>
-      <li><router-link to="/resume">{{ $t('summary') }}</router-link></li>
-      <li><router-link to="/competences">{{ $t('skills') }}</router-link></li>
-      <li><router-link to="/projets">{{ $t('projects') }}</router-link></li>
-      <li><router-link to="/contact">{{ $t('contact') }}</router-link></li>
-      <li><router-link to="/">{{ $t('resume') }}</router-link></li>
+    <ul class="menu--list">
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/">{{ $t('top') }}</router-link></li>
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/resume">{{ $t('summary') }}</router-link></li>
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/competences">{{ $t('skills') }}</router-link></li>
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/projets">{{ $t('projects') }}</router-link></li>
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/contact">{{ $t('contact') }}</router-link></li>
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/">{{ $t('resume') }}</router-link></li>
     </ul>
   </div>
 </template>
@@ -46,18 +46,26 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style scoped lang="scss">
+@import "../assets/_variables.scss";
+
+.menu {
+ &--list {
+   list-style-type: none;
+   padding: 0;
+   &-item {
+     text-align: left;
+     margin: 2rem .5rem;
+     &-link {
+       letter-spacing: .25rem;
+       color: $second-light;
+       border-bottom: .25rem solid transparent;
+       &:hover {
+         font-weight: bolder;
+         border-bottom: .25rem solid $second-light;
+       }
+     }
+   }
+ }
 }
 </style>
