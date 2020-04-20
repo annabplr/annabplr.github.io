@@ -29,7 +29,7 @@ export default {
 @import "./assets/_variables.scss";
 body {
   margin: 0;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 #app {
   font-family: $font-light;

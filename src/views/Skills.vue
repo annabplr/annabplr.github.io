@@ -152,7 +152,7 @@ export default {
     return {
       tech: ["ruby", "html", "vueJS", "git", "SQL", "API", "PWA", "heroku", "javascript", "angular"],
       general: ["slack", "trello", "zapier", "agile", "figma", "stripe", "anglais", "adobe", "toggle"],
-      perso: ["curious", "riguourous", "autonomous"],
+      perso: ["curious", "rigorous", "autonomous"],
       like: ["think", "minimalism", "learn"],
       passion: ["lettering", "hiking", "gardening"]
     }
