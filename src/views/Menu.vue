@@ -6,7 +6,6 @@
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/competences">{{ $t('skills') }}</router-link></li>
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/projets">{{ $t('projects') }}</router-link></li>
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/contact">{{ $t('contact') }}</router-link></li>
-      <li class="menu--list-item"><a class="menu--list-item-link" href="https://drive.google.com/open?id=1OOknn6oFbzbXnMPZTd4ZRVKGYMGw-ktB" target="_blank">{{ $t('resume') }}</a></li>
     </ul>
   </div>
 </template>
