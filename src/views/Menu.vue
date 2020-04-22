@@ -60,10 +60,10 @@ export default {
        letter-spacing: .25rem;
        color: $second-light;
        border-bottom: .25rem solid transparent;
-       &:hover {
-         font-weight: bolder;
-         border-bottom: .25rem solid $second-light;
-       }
+     }
+     &-link:hover, .router-link-exact-active {
+       font-weight: bolder;
+       border-bottom: .25rem solid $second-light;
      }
    }
  }

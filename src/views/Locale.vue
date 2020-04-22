@@ -1,9 +1,9 @@
 <template>
   <div class="locale">
-    <div class="locale-item" @click="$i18n.locale = 'fr'">
+    <div :class="{'locale-item-selected': $i18n.locale === 'fr'}" class="locale-item" @click="$i18n.locale = 'fr'">
       {{ $t('fr') }}
     </div>
-    <div class="locale-item" @click="$i18n.locale = 'en'">
+    <div :class="{'locale-item-selected': $i18n.locale === 'en'}" class="locale-item" @click="$i18n.locale = 'en'">
       {{ $t('en') }}
     </div>
   </div>
@@ -29,7 +29,7 @@ export default {
     letter-spacing: .25rem;
     border-bottom: .25rem solid transparent;
     cursor: pointer;
-    &:hover {
+    &:hover, &-selected {
       font-weight: bolder;
       border-bottom: .25rem solid $black-dark;
     }
