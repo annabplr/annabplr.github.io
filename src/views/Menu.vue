@@ -16,7 +16,7 @@
     "top": "top",
     "summary":"résumé",
     "skills":"compétences",
-    "projects": "projets",
+    "projects": "expérience",
     "contact":"contact",
     "resume":"cv",
     "fr": "fr",
@@ -39,8 +39,6 @@
 
 export default {
   name: 'Menu',
-  components: {
-  },
 }
 </script>
 

@@ -53,7 +53,7 @@
     "technical-title": "techniques",
     "technical": {
       "ruby": "ruby on rails",
-      "html": "html / css / sass",
+      "html": "html / css / sass / bem / pug",
       "vueJS": "vueJS",
       "git": "git & github",
       "SQL": "SQL",
@@ -65,6 +65,8 @@
     },
     "general-title": "transverses",
     "general": {
+      "project": "gestion de projets",
+      "client": "relation clients",
       "slack": "slack",
       "trello": "trello/asana",
       "zapier": "zapier",
@@ -99,7 +101,7 @@
     "technical-title": "technical",
     "technical": {
       "ruby": "ruby on rails",
-      "html": "html / css / sass",
+      "html": "html / css / sass / bem / pug",
       "vueJS": "vueJS",
       "git": "git & github",
       "SQL": "SQL",
@@ -111,6 +113,8 @@
     },
     "general-title": "transversal",
     "general": {
+      "project": "projects management",
+      "client": "customer relationship",
       "slack": "slack",
       "trello": "trello/asana",
       "zapier": "zapier",
@@ -151,7 +155,7 @@ export default {
   data: function() {
     return {
       tech: ["ruby", "html", "vueJS", "git", "SQL", "API", "PWA", "heroku", "javascript", "angular"],
-      general: ["slack", "trello", "zapier", "agile", "figma", "stripe", "anglais", "adobe", "toggle"],
+      general: ["project", "client", "slack", "trello", "zapier", "agile", "figma", "stripe", "anglais", "adobe", "toggle"],
       perso: ["curious", "rigorous", "autonomous"],
       like: ["think", "minimalism", "learn"],
       passion: ["lettering", "hiking", "gardening"]
