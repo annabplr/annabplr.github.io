@@ -1,10 +1,39 @@
 <template>
   <div class="skills">
     <div class="skills-container">
-      <h2 class="">{{ $t('title') }}</h2>
+      <h2 class="skills-container-title">
+        {{ $t('title') }}
+        <div class="skills-container-title-dots"></div>
+      </h2>
+      <div class="skills-group skills-right">
+          <h3 class="skills-group-title">
+            <span>
+              {{ $t('me-title') }}
+            </span>
+          </h3>
+          <div class="skills-group-data">
+            <div class="skills-people-group">
+              <img class="skills-people-image skills-people-image-face" src="../assets/female.svg" alt="">
+              <img class="skills-people-image skills-people-image-star skills-people-image-star-1" src="../assets/star.svg" alt="">
+              <img class="skills-people-image skills-people-image-star skills-people-image-star-2" src="../assets/star.svg" alt="">
+              <img class="skills-people-image skills-people-image-star skills-people-image-star-3" src="../assets/star.svg" alt="">
+              <img class="skills-people-image skills-people-image-star skills-people-image-star-4" src="../assets/star.svg" alt="">
+            </div>
+            <div class="skills-items">
+              <div class="skills-items-background pink-blob"></div>
+              <ul class="skills-items-list">
+                <li> {{ $t('me-age') }} </li>
+                <li> {{ $t('me-place') }} </li>
+                <li v-for="item in perso" v-bind:key="item"> {{ $t('perso.' + item) }}</li>
+              </ul>
+            </div>
+          </div>
+      </div>
       <div class="skills-group skills-left">
-          <h3>
-            {{ $t('technical-title') }}
+          <h3 class="skills-group-title">
+            <span>
+              {{ $t('technical-title') }}
+            </span>
           </h3>
           <div class="skills-group-data">
             <div class="skills-keyboard-group">
@@ -21,46 +50,33 @@
           </div>
       </div>
       <div class="skills-group skills-right">
-        <h3>
-          {{ $t('general-title') }}
+        <h3 class="skills-group-title">
+          <span>
+            {{ $t('general-title') }}
+          </span>
         </h3>
         <div class="skills-group-data">
-          <div class="skills-wheel-group">
-            <img class="skills-wheel-image" src="../assets/wheel.svg" alt="">
-            <img class="skills-wheel-image skills-wheel-image-bis" src="../assets/wheel.svg" alt="">
-            <img class="skills-wheel-image skills-wheel-image-ter" src="../assets/wheel.svg" alt="">
-          </div>
           <div class="skills-items">
             <div class="skills-items-background pink-dots"></div>
             <ul class="skills-items-list">
               <li v-for="item in general" v-bind:key="item"> {{ $t('general.' + item) }} </li>
             </ul>
+            <div class="skills-items-background grey-long-blob"></div>
+          </div>
+          <div class="skills-wheel-images">
+            <div class="skills-wheel-group">
+              <img class="skills-wheel-image" src="../assets/wheel.svg" alt="">
+              <img class="skills-wheel-image skills-wheel-image-bis" src="../assets/wheel.svg" alt="">
+              <img class="skills-wheel-image skills-wheel-image-ter" src="../assets/wheel.svg" alt="">
+            </div>
           </div>
         </div>
       </div>
       <div class="skills-group skills-left">
-        <h3>
-          {{ $t('perso-title') }}
-        </h3>
-        <div class="skills-group-data">
-          <div class="skills-people-group">
-            <img class="skills-people-image skills-people-image-face" src="../assets/female.svg" alt="">
-            <img class="skills-people-image skills-people-image-star skills-people-image-star-1" src="../assets/star.svg" alt="">
-            <img class="skills-people-image skills-people-image-star skills-people-image-star-2" src="../assets/star.svg" alt="">
-            <img class="skills-people-image skills-people-image-star skills-people-image-star-3" src="../assets/star.svg" alt="">
-            <img class="skills-people-image skills-people-image-star skills-people-image-star-4" src="../assets/star.svg" alt="">
-          </div>
-          <div class="skills-items">
-            <div class="skills-items-background pink-blob"></div>
-            <ul class="skills-items-list">
-              <li v-for="item in perso" v-bind:key="item"> {{ $t('perso.' + item) }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="skills-group skills-right">
-        <h3>
-          {{ $t('like-title') }}
+        <h3 class="skills-group-title">
+          <span>
+            {{ $t('like-title') }}
+          </span>
         </h3>
         <div class="skills-group-data">
           <div class="skills-heart-group">
@@ -75,13 +91,15 @@
           </div>
         </div>
       </div>
-      <div class="skills-group skills-left">
-        <h3>
-          {{ $t('passion-title') }}
+      <div class="skills-group skills-right">
+        <h3 class="skills-group-title">
+          <span>
+            {{ $t('passion-title') }}
+          </span>
         </h3>
         <div class="skills-group-data">
           <div class="skills-items">
-            <div class="skills-items-background grey-dots"></div>
+            <div class="skills-items-background blob-mountain"></div>
             <ul class="skills-items-list">
               <li v-for="item in passion" v-bind:key="item">{{ $t('passion.' + item) }}</li>
             </ul>
@@ -100,7 +118,10 @@
 <i18n>
 {
   "fr": {
-    "title": "compétences",
+    "title": "profil & compétences",
+    "me-title": "annabelle",
+    "me-age": "31 ans",
+    "me-place": "pays de gex - genève",
     "technical-title": "techniques",
     "technical": {
       "ruby": "ruby on rails",
@@ -149,6 +170,9 @@
   },
   "en": {
     "title": "skills",
+    "me-title": "annabelle",
+    "me-age": "31 years old",
+    "me-place": "pays de gex - geneva",
     "technical-title": "technical",
     "technical": {
       "ruby": "ruby on rails",
@@ -221,25 +245,63 @@ export default {
 .skills {
   display: flex;
   justify-content: center;
-  background-color: $second-light;
+  background-color: $main-dark;
   &-container {
     background-color: $second-dark;
-    // background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fcf7f8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
     padding-top: 2rem;
     padding-bottom: 2rem;
-    border: 2px solid $second-light;
     display: flex;
     flex-direction: column;
+    border-left: .5rem solid $second-light;
+    border-right: .5rem solid $second-light;
     justify-content: space-around;
     width: 80%;
+    max-width: 880px;
+    &-title {
+      font-family: $font-black;
+      font-size: $size-h2;
+      color: $black-dark;
+      letter-spacing: 2px;
+      position: relative;
+      margin-bottom: 6rem;
+      border-bottom: .4rem solid $black-dark;
+      z-index: 10;
+      &-dots {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        width: 30%;
+        height: 6rem;
+      }
+    }
   }
   &-group {
-    width: 80%;
+    width: 60%;
     position: relative;
     &-data {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 2rem;
+      margin-left: .5rem;
+      margin-right: .5rem;
+      margin-bottom: 2rem;
+      border: .4rem solid $black-dark;
+      border-radius: 20px;
+    }
+    &-title {
+      font-family: $font-black;
+      font-size: $size-h3;
+      text-align: right;
+      padding-right: 5rem;
+      line-height: 0.25;
+      letter-spacing: 1px;
+      span {
+        padding: 0 .5rem;
+        background-color: $second-dark;
+      }
     }
   }
   &-items {
@@ -260,18 +322,38 @@ export default {
         background-repeat: repeat-x repeat-y;
       }
       &.pink-blob {
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-image: url('../assets/blob-red.svg');
-        height: 220%;
-        left: -142%;
-        width: 170%;
+        height: 155%;
+        left: -91%;
+        width: 134%;
       }
       &.grey-blob {
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-image: url('../assets/blob-grey.svg');
         height: 110%;
         left: -75%;
         width: 83%;
+      }
+      &.grey-long-blob {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../assets/blob-long-grey.svg');
+        height: 110%;
+        width: 93%;
+        left: auto;
+        right: -78%;
+      }
+      &.blob-mountain {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../assets/blob-mountain.svg');
+        height: 217%;
+        width: 122%;
+        left: auto;
+        right: -105%;
       }
     }
     &-list {
@@ -279,10 +361,14 @@ export default {
       background-color: $second-light;
       padding: .5rem;
       z-index: 10;
+      li {
+        .imp {
+          background-color: $main-darker;
+        }
+      }
     }
   }
   &-left {
-    margin-right: 20%;
     .skills-items-background.grey-dots {
       right: -130%;
       left: auto;
@@ -290,7 +376,7 @@ export default {
     }
   }
   &-right {
-    margin-left: 20%;
+    margin-left: 40%;
     .skills-items-background {
 
     }
@@ -424,9 +510,14 @@ export default {
     }
   }
   &-wheel {
+    &-images {
+      width: 50%;
+      height: 10rem;
+      position: relative;
+    }
     &-group {
       position: absolute;
-      right: 0;
+      left: 0;
       width: 50%;
       height: 3rem;
       animation-name: translate;
@@ -435,11 +526,12 @@ export default {
       animation-timing-function: linear;
       display: flex;
       align-items: center;
+      z-index: 10;
     }
     &-image {
       position: absolute;
       width: 3rem;
-      left: 35%;
+      left: 25%;
       bottom: 0;
       animation-name: spin;
       animation-duration: 10000ms;
@@ -449,13 +541,12 @@ export default {
         animation-name: reverse-spin;
         width: 1.75rem;
         bottom: 2rem;
-
-        left: calc(35% - 1.5rem)
+        left: calc(25% - 1.5rem)
       }
       &-ter {
         animation-name: reverse-spin;
         width: 1.45rem;
-        left: calc(35% + 3rem);
+        left: calc(25% + 3rem);
         bottom: 0;
       }
     }
@@ -522,14 +613,13 @@ a {
 }
 @keyframes translate {
   0% {
-    height: 3rem
+    transform: translateY(0);
   }
   50% {
-    height: 80%;
+    transform: translateY(8rem);
   }
   100% {
-    height: 3rem
-  }
+    transform: translateY(0);  }
 }
 @keyframes star {
   0% {

@@ -2,9 +2,6 @@
   <div id="app" class='app'>
     <router-view class="app--view" />
     <div class="app--menu">
-      <div class="wip">
-        EN COURS DE MISE A JOUR
-      </div>
       <Menu/>
       <Locale/>
     </div>
@@ -30,6 +27,10 @@ export default {
 body {
   margin: 0;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 #app {
   font-family: $font-light;
@@ -43,20 +44,14 @@ body {
 }
 .app {
   min-height: 100vh;
-  .wip {
-    position: relative;
-    right: 2rem;
-    top: 0rem;
-    padding: 2rem;
-    transform: rotate(25deg);
-    background-color: $main-darker;
-    color: $second-light;
-  }
   &--view {
     width: 85%;
   }
   &--menu {
-    position: relative;
+    position: fixed;
+    right: 0;
+    padding-top: 10%;
+    height: 100vh;
     width: 15%;
     display: flex;
     flex-direction: column;
@@ -68,5 +63,8 @@ body {
       }
     }
   }
+}
+.projects + .app--menu {
+  background-color: $main-darker;
 }
 </style>

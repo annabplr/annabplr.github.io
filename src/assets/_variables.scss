@@ -19,7 +19,7 @@ src: url("~@/assets/fonts/visuelt-regular.otf");
 }
 
 
-$main-dark: #DC9D9C;
+$main-dark: #86A985;
 $main-darker: #A30B37;
 $second-dark: #C4CAD0;
 $second-light: #FCF7F8;
@@ -27,11 +27,17 @@ $black-dark: #464849;
 $black-light: #909191;
 $white: #FFFFFF;
 
-$size-h1: 2rem;
-$size-h2: 1.5rem;
+$size-h1: 3rem;
+$size-h2-landing: 1.5rem;
+$size-h2: 3rem;
+$size-h3: 2rem;
 $size-p: 1rem;
 
 $font-black: "VisueltBlack", sans-serif;
 $font-light: "VisueltLight", sans-serif;
 $font-medium: "VisueltMedium", sans-serif;
 $font-regular: "VisueltRegular", sans-serif;
+
+h3 {
+  color: $black-dark;
+}

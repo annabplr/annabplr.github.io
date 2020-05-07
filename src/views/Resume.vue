@@ -4,6 +4,8 @@
     <ul>
       <li>{{ $t('coding') }}</li>
       <li>{{ $t('writing') }}</li>
+      <li>{{ $t('presentation') }}</li>
+
     </ul>
   </div>
 </template>
@@ -13,7 +15,8 @@
   "fr": {
     "title": "en quelques mots",
     "coding": "je code",
-    "writing":"j'écris"
+    "writing":"j'écris",
+    "presentation": "je m'appelle Annabelle, j'ai 31 ans et je code depuis plus de 2 ans. Originaire de la Drôme, et après avoir vécue à Paris et Lyon, je vis à présent à proximité de Genève. "
   },
   "en": {
     "title": "in a few words",

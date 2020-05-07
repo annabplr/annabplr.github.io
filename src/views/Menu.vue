@@ -2,7 +2,6 @@
   <div class="menu">
     <ul class="menu--list">
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/">{{ $t('top') }}</router-link></li>
-      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/resume">{{ $t('summary') }}</router-link></li>
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/competences">{{ $t('skills') }}</router-link></li>
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/projets">{{ $t('projects') }}</router-link></li>
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/contact">{{ $t('contact') }}</router-link></li>
@@ -15,7 +14,7 @@
   "fr": {
     "top": "top",
     "summary":"résumé",
-    "skills":"compétences",
+    "skills":"profil",
     "projects": "expérience",
     "contact":"contact",
     "resume":"cv",
@@ -25,7 +24,7 @@
   "en": {
     "top": "top",
     "summary":"summary",
-    "skills":"skills",
+    "skills":"profile",
     "projects": "projects",
     "contact":"contact",
     "resume":"resume",

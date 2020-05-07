@@ -49,7 +49,7 @@
       <div class="contact-image">
         <img class="contact-image-img" alt="octocat picture" src="../assets/octocat.png">
       </div>
-
+      <div class="contact-dots"></div>
     </div>
   </div>
 </template>
@@ -159,6 +159,15 @@ export default {
     &-img {
       width: 500px;
     }
+  }
+  &-dots {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23A30B37' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 20rem;
+    height: 15rem;
+    transform: rotate(5deg);
   }
 }
 </style>
