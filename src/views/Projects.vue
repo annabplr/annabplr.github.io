@@ -7,6 +7,7 @@
       </h2>
       <transition name="projects-buttons">
         <div class="projects-buttons">
+          <div class="projects-buttons-div">
             <div class="projects-buttons-each" @click= "pro = true" :key="1" >
               <!-- <div v-show="pro == true" class="projects-buttons-each-background"></div> -->
               <h3 class="projects-buttons-each-name" :class="{selected : (pro === true)}">
@@ -19,6 +20,7 @@
                 {{ $t('side') }}
               </h3>
             </div>
+          </div>
         </div>
       </transition>
       <div v-show="pro == true" class="projects-pro">
@@ -28,19 +30,32 @@
               class="projects-pro-each-left"
               @click= "proProjectsDisplay(index)"
               v-for="(item, index) in proProjects" v-bind:key="item">
-              {{ $t(item) }}
-              <div class="">
+              <div class="projects-pro-each-type">
+                {{ $t(item + '-type') }}
+              </div>
+              <div class="projects-pro-each-desc">
+                {{ $t(item) }}
+              </div>
+              <div class="projects-pro-each-lang">
                 <span class="" v-for="lang in $t(item + '-lang')" v-bind:key="lang"> {{lang}} </span>
               </div>
           </div>
         </div>
         <div class="projects-pro-each-right" v-show="proDisplay !== ''">
-          <p>{{ $t(proDisplay + '-details') }}</p>
-          <ul v-if="$t(proDisplay + '-list') !== ' '">
-            <li v-for="task in $t(proDisplay + '-list')" v-bind:key="task"> {{task}} • •</li>
-          </ul>
-          <img :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="">
-          <div class="projects-pro-each-right-dots"></div>
+          <div class="projects-pro-each-right-text">
+            <p>{{ $t(proDisplay + '-details') }}</p>
+            <ul v-if="$t(proDisplay + '-list') !== ' '">
+              <li v-for="task in $t(proDisplay + '-list')" v-bind:key="task"> {{task}}</li>
+            </ul>
+          </div>
+          <div class="projects-pro-each-right-image">
+            <img @click= "displayModale = true" :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="">
+            <div class="projects-pro-each-right-dots"></div>
+            <div v-if="displayModale" @click= "displayModale = !displayModale" class="projects-pro-each-right-modale">
+              coucou
+              <img :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="">
+            </div>
+          </div>
         </div>
       </div>
       <div v-show="pro == false" class="projects-side">
@@ -62,7 +77,12 @@
           </div>
           <div class="projects-side-content-right">
             <div class="projects-side-content-image">
-              <img :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="">
+              <img @click="displaySideModale = true" :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="">
+              <div v-if="displaySideModale" @click= "displaySideModaleFunction()" class="projects-side-content-image-modale">
+                coucou
+                <img :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="">
+                <div class="projects-side-content-image-modale-close" @click="displaySideModale= !displaySideModale">X</div>
+              </div>
             </div>
             <div class="projects-side-content-thumbnail">
               <div class="">
@@ -87,18 +107,21 @@
   "fr": {
     "title": "expérience",
     "projects": "expérience professionnelle",
-    "projects-subtitle": "En 2019 et 2020, en tant que Développeuse Web FullStack au sein de l'agence web Kinoba (Lyon), j'ai eu l'opportunité de travailler sur 3 gros projets :",
-    "jitaku": "un projet permettant aux promoteurs immobiliers de gérer les logements livrés à des particuliers",
+    "projects-subtitle": "En 2019 et 2020, en tant que Développeuse Web FullStack au sein de l'agence web Kinoba (Lyon), j'ai eu l'opportunité de travailler principalement sur 3 gros projets :",
+    "jitaku-type": "web-app",
+    "jitaku": "gestion globale de l'activité des promoteurs immobiliers",
     "jitaku-lang": ["Ruby On Rails", "AngularJs"],
     "jitaku-details": "pour ce projet très conséquent, j'ai participé à l'amélioration de fonctionnalités existantes et à l'ajout de nouvelles fonctionnalités, tant en back qu'en front, sur des thématiques très diverses :",
-    "jitaku-list": ["génération de pdf", "mise en place d'éditeur WYSIWYG", "gestion d'ActiveAdmin", "gestion de devis et de factures", "envoi de mails", "téléchargement de documents", "création d'enquêtes satisfaction", "création de graphiques (chart.js)", "tests", "etc."],
+    "jitaku-list": ["génération de pdf", "mise en place d'éditeur WYSIWYG", "gestion d'ActiveAdmin", "gestion de devis et de factures", "envoi de mails", "téléchargement de documents", "création d'enquêtes satisfaction", "création de graphiques (chart.js)", "tests, etc."],
     "jitaku-image": "jitak-project.jpg",
-    "packengers": "un projet de site vitrine pour une société de transporteurs innovante",
+    "packengers-type": "site vitrine",
+    "packengers": "société de transport innovante",
     "packengers-lang": ["Vue.js"],
     "packengers-list": " ",
     "packengers-image": "pack-project.jpg",
     "packengers-details": "pour ce projet, que j'ai mené de A à Z, j'ai pu améliorer mes compétences en Vue.js, notamment sur la partie Animations/Transitions ainsi que sur la Responsivité car le site a le comportement d'une application mobile.",
-    "e-succession": "un projet s'adressant à des particuliers auxquels les notaires font appel pour générer leurs declarations de succession",
+    "e-succession-type": "web-app",
+    "e-succession": "génération de declarations de succession pour les notaires",
     "e-succession-lang": ["Ruby On Rails","Angular 8"],
     "e-succession-list": " ",
     "e-succession-details": "pour ce projet, j'ai participé à la création du back-end de l'application, ainsi qu'à la création des tests, et à la génération du document Cerfa final, généré en PDF. J'ai également eu des missions en front-end, notamment à la création de pages du formulaire, présentant de nombreuses conditions.",
@@ -121,7 +144,7 @@
     "jitaku": "un projet s'addressant à des promoteurs immobiliers",
     "jitaku-lang": ["Ruby On Rails", "AngularJs"],
     "jitaku-details": "pour ce projet très conséquent, j'ai participé à l'amélioration de fonctionnalités existantes et à l'ajout de nouvelles fonctionnalités, tant en back qu'en front, sur des thématiques très diverses :",
-    "jitaku-list": ["génération de pdf", "mise en place d'éditeur WYSIWYG", "gestion d'ActiveAdmin", "gestion de devis et de factures", "envoi de mails", "téléchargement de documents", "création d'enquêtes satisfaction", "création de graphiques (chart.js)", "tests", "etc."],
+    "jitaku-list": ["génération de pdf", "mise en place d'éditeur WYSIWYG", "gestion d'ActiveAdmin", "gestion de devis et de factures", "envoi de mails", "téléchargement de documents", "création d'enquêtes satisfaction", "création de graphiques (chart.js)", "tests, etc."],
     "jitaku-image": "jitak-project.jpg",
     "packengers": "un projet de site vitrine pour une société de transporteurs innovante",
     "packengers-lang": ["Vue.js"],
@@ -157,7 +180,9 @@ export default {
       selectedProject: 'pauzi',
       selectedImage: 1,
       pro: true,
-      proDisplay: 'jitaku'
+      proDisplay: 'jitaku',
+      displayModale: false,
+      displaySideModale: false
     }
   },
   mounted() {
@@ -169,6 +194,14 @@ export default {
         this.proDisplay = ''
       } else {
         this.proDisplay = this.proProjects[i]
+      }
+    },
+    displaySideModaleFunction() {
+      if (this.selectedImage !== 3) {
+        this.selectedImage += 1
+      }
+      else {
+        this.displaySideModale = !this.displaySideModale
       }
     }
   }
@@ -205,6 +238,11 @@ export default {
       border-bottom: .4rem solid $black-dark;
       z-index: 10;
       text-align: center;
+      @media(max-width:767px){
+        text-align: right;
+        padding-right: 3rem;
+        margin-bottom: 2rem;
+      }
       &-dots {
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
         z-index: -1;
@@ -213,22 +251,37 @@ export default {
         right: 10%;
         width: 30%;
         height: 6rem;
+        @media(max-width:767px){
+          height: 100%;
+          right: 0;
+        }
       }
     }
   }
   &-buttons {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem auto;
+    background-color: $second-light;
+    &-div {
+      margin: 2rem auto;
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      @media(max-width:767px){
+        width: 80%;
+      }
+    }
     &-each {
       cursor: pointer;
       &-name {
         margin: 0;
         z-index: 1;
         padding: 2rem;
-        opacity: .7;
+        opacity: .3;
         font-size: $size-h3;
+        @media(max-width:767px){
+          font-size: 1.5rem;
+          padding: .5rem;
+          padding-left: 1rem;
+        }
         &.selected {
           opacity: 1;
           background-size: contain;
@@ -258,58 +311,153 @@ export default {
     &-each {
       display: flex;
       justify-content: space-around;
+      @media(max-width:767px){
+        flex-direction: column;
+      }
       &-left {
+        // text-align: justify;
         border: .4rem solid $black-dark;
         border-radius: 20px;
-        width: 15rem;
-        padding: .75rem;
+        width: 13rem;
+        padding: 1rem;
         padding-bottom: 2rem;
         position: relative;
-        div {
-          position: absolute;
-          right: 1.5rem;
-          bottom: -.8rem;
+        cursor: pointer;
+        @media(max-width:767px){
+          width: 80%;
+          margin-left: 5%;
+          padding-bottom: 1.5rem;
+          margin-bottom: 1rem;
           display: flex;
-          span {
-            background-color: $second-dark;
-            color: $main-dark;
-            font-family: $font-black;
-            padding-left: 0.25rem;
-            padding-right: 0.25rem;
-            margin-left: .2rem;
-            margin-right: .2rem;
-            font-size: .85rem;
-          }
         }
         &.selected {
           border: .4rem solid $main-darker;
+          .projects-pro-each-type {
+            background-color: $second-light;
+            opacity: 1;
+          }
+          @media(max-width:767px){
+            .projects-pro-each-desc {
+              display: block;
+            }
+          }
           // background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
           // background-repeat: no-repeat;
           // background-size: contain;
         }
       }
+      &-type {
+        width: 60%;
+        padding-left: .5rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: .9rem;
+        margin-bottom: 0.5rem;
+        opacity: .5;
+        @media(max-width:767px){
+          font-size: 1.25rem;
+          line-height: .7rem;
+          margin-bottom: .25rem;
+          width: 50%;
+        }
+      }
+      &-desc {
+        @media(max-width:767px){
+          margin-left: .5rem;
+          display: none;
+        }
+      }
+      &-lang {
+        position: absolute;
+        right: 1.5rem;
+        bottom: -.8rem;
+        display: flex;
+        span {
+          background-color: $second-dark;
+          color: $main-dark;
+          font-family: $font-black;
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
+          margin-left: .2rem;
+          margin-right: .2rem;
+          font-size: .85rem;
+        }
+      }
       &-right {
-        background-color: $second-light;
-        padding: 1rem;
+        display: flex;
         width: 80%;
-        margin-top: 4rem;
+        padding: 1rem;
+        margin-top: 2rem;
         margin-left: 8%;
-        position: relative;
-        ul {
-          margin-left: 3rem;
+        @media(max-width:767px){
+          flex-direction: column-reverse;
+          margin-left: 5%;
+          margin-top: 1rem;
+        }
+        &-text {
+          padding: 1rem;
+          background-color: $second-light;
+          min-width: 360px;
+          min-height: 290px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @media(max-width:767px){
+            min-width: auto;
+            width: 100%;
+            min-height: auto;
+            margin-top: 1rem;
+          }
+          p {
+            @media(max-width:767px){
+              margin: 0;
+            }
+          }
+          ul {
+            margin-left: 3rem;
+            @media(max-width:767px){
+              columns: 2;
+              margin-left: .5rem;
+              font-size: .8rem;
+            }
+          }
+        }
+        &-image {
+          position: relative;
+          display: flex;
+          align-items: center;
         }
         img {
-          margin-top: 2rem;
-          width: 80%;
-          margin-left: 10%;
+          width: 95%;
+          margin-left: 5%;
         }
         &-dots {
           position: absolute;
-          left: 2rem;
-          bottom: .5rem;
+          right: -1rem;
+          bottom: 20%;
           width: 20%;
-          height: 20rem;
-          background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2386A985' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+          height: 60%;
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23A30B37' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+          @media(max-width:767px){
+            height: 100%;
+            bottom: -5%;
+          }
+        }
+        &-modale {
+          z-index: 100;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(70, 72, 73, .8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 80%;
+          }
         }
       }
     }
@@ -325,6 +473,9 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-around;
+      @media(max-width:767px){
+        flex-direction: column-reverse;
+      }
       &-right {
         min-width: 40%;
       }
@@ -334,13 +485,52 @@ export default {
         margin-bottom: 5rem;
         padding: 1rem;
         background-color: $second-light;
+        @media(max-width:767px){
+          width: 80%;
+          margin-bottom: 1rem;
+        }
       }
       &-text {
         margin-bottom: 2rem;
+        @media(max-width:767px){
+          margin-bottom: 1rem;
+        }
       }
       &-image {
         img {
-          width: 300px;
+          width: 350px;
+          height: 350px;
+          object-fit: cover;
+          object-position: 0% 18%;
+          @media(max-width:767px){
+            width: 80%;
+            height: 180px;
+            margin-left: 10%;
+          }
+        }
+        &-modale {
+          z-index: 100;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(70, 72, 73, .8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            object-fit: contain;
+            width: auto;
+            height: 80%;
+          }
+          &-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: $second-light;
+            cursor: pointer;
+          }
         }
       }
       &-thumbnail {
@@ -350,6 +540,9 @@ export default {
         img {
           border: .4rem solid transparent;
           width: 70px;
+          height: 70px;
+          object-fit: cover;
+          object-position: 0% 18%;
           &.selected {
             border: .4rem solid $main-dark;
             border-radius: 20px;
@@ -385,6 +578,12 @@ export default {
             bottom: -1.5rem;
             display: flex;
             z-index: -1;
+            @media(max-width:767px){
+              right: 0;
+              bottom: -1rem;
+              width: 35%;
+              height: 120%;
+            }
           }
         }
       }

@@ -23,15 +23,18 @@ export default {
   display: flex;
   align-items: center;
   margin: 1rem;
+  @media(max-width:767px){
+    width: auto;
+  }
   &-item {
-    color: $black-dark;
+    color: $second-light;
     margin-right: 1rem;
     letter-spacing: .25rem;
     border-bottom: .25rem solid transparent;
     cursor: pointer;
     &:hover, &-selected {
       font-weight: bolder;
-      border-bottom: .25rem solid $black-dark;
+      border-bottom: .25rem solid $second-light;
     }
   }
 }

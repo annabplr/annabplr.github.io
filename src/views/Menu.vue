@@ -46,12 +46,19 @@ export default {
 @import "../assets/_variables.scss";
 
 .menu {
- &--list {
+  &--list {
    list-style-type: none;
    padding: 0;
+   @media(max-width:767px){
+     margin-left: 1.5rem;
+   }
    &-item {
      text-align: left;
      margin: 2rem .5rem;
+     @media(max-width:767px){
+       display: inline-block;
+       margin: .5rem .5rem;
+     }
      &-link {
        letter-spacing: .25rem;
        color: $second-light;

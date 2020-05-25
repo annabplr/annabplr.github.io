@@ -24,6 +24,12 @@ export default {
 
 <style lang="scss">
 @import "./assets/_variables.scss";
+
+html {
+  @media (max-width:767px) {
+    font-size: 80%;
+  }
+}
 body {
   margin: 0;
   overflow-x: hidden;
@@ -46,6 +52,9 @@ body {
   min-height: 100vh;
   &--view {
     width: 85%;
+    @media(max-width:767px){
+      width: 100%;
+    }
   }
   &--menu {
     position: fixed;
@@ -56,6 +65,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media(max-width:767px){
+      top: 0;
+      left: 0;
+      height: 2rem;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 2%;
+    }
     a {
       text-decoration: none;
       &:hover {
@@ -66,5 +84,8 @@ body {
 }
 .projects + .app--menu {
   background-color: $main-darker;
+  @media(max-width:767px){
+    background-color: transparent;
+  }
 }
 </style>

@@ -49,7 +49,6 @@
       <div class="contact-image">
         <img class="contact-image-img" alt="octocat picture" src="../assets/octocat.png">
       </div>
-      <div class="contact-dots"></div>
     </div>
   </div>
 </template>
@@ -100,6 +99,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  @media(max-width:767px) {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
   &-container {
     display: flex;
     align-items: center;
@@ -109,15 +114,34 @@ export default {
     background-image: url('../assets/blob-shape.svg');
     width: 800px;
     height: 800px;
+    @media(max-width:767px) {
+      width: 98%;
+      height: auto;
+      margin-bottom: 20%;
+    }
+    @media(max-width:767px) {
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
     &-links {
       margin-left: 10%;
       margin-bottom: 10%;
       z-index: 10;
+      @media(max-width:767px) {
+        margin-left: -5%;
+        margin-bottom: 20%;
+      }
       &-global {
         display: flex;
       }
       &-item {
         height: 5rem;
+        @media(max-width:767px) {
+          height: 2rem;
+        }
         a {
           text-decoration: none;
         }
@@ -135,6 +159,10 @@ export default {
           background-size: cover;
           padding: 3rem;
           width: 2rem;
+          @media(max-width:767px) {
+            padding: 2rem;
+            width: 1.5rem;
+          }
           &-mail {
             background-image: url('../assets/blob-shape-1.svg');
           }
@@ -156,18 +184,17 @@ export default {
     z-index: 0;
     left: -10rem;
     bottom: 0;
+    @media(max-width:767px) {
+      left: auto;
+      bottom: -30%;
+      right: -30%;
+    }
     &-img {
       width: 500px;
+      @media(max-width:767px) {
+        width: 60%;
+      }
     }
-  }
-  &-dots {
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23A30B37' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-    position: absolute;
-    top: 2rem;
-    right: 0;
-    width: 20rem;
-    height: 15rem;
-    transform: rotate(5deg);
   }
 }
 </style>

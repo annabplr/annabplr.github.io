@@ -266,6 +266,10 @@ export default {
       margin-bottom: 6rem;
       border-bottom: .4rem solid $black-dark;
       z-index: 10;
+      @media(max-width:767px){
+        text-align: right;
+        padding-right: 3rem;
+      }
       &-dots {
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
         z-index: -1;
@@ -274,12 +278,19 @@ export default {
         right: 10%;
         width: 30%;
         height: 6rem;
+        @media(max-width:767px){
+          height: 100%;
+          right: 0;
+        }
       }
     }
   }
   &-group {
     width: 60%;
     position: relative;
+    @media(max-width:767px){
+      width: 100%;
+    }
     &-data {
       display: flex;
       justify-content: center;
@@ -373,10 +384,17 @@ export default {
       right: -130%;
       left: auto;
       width: 130%;
+      @media(max-width:767px){
+        right: auto;
+        width: 100%;
+      }
     }
   }
   &-right {
     margin-left: 40%;
+    @media(max-width:767px){
+      margin-left: 0;
+    }
     .skills-items-background {
 
     }

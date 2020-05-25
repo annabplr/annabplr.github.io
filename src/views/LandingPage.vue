@@ -13,6 +13,7 @@
     <div class="hero-container">
       <div class="hero-image">
         <img class="hero-image-img" alt="Profile picture" src="../assets/profile_pic.jpg">
+        <div class="hero-dots"></div>
       </div>
       <div class="hero-text">
         <h2 class="hero-text-subtitle">{{ $t('hello') }}</h2>
@@ -92,28 +93,47 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media(max-width:767px){
+      flex-direction: column;
+    }
   }
   &-image {
     margin-right: 2rem;
+    position: relative;
     &-img {
       width: 150px;
       border-radius: 50%;
+      z-index: 10;
     }
+  }
+  &-dots {
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    left: -40%;
+    width: 150%;
+    height: 120%;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
   }
   &-text {
     text-align: right;
+    @media(max-width:767px){
+      margin-top: 2rem;
+    }
     &-title {
       margin: .5rem 0;
       margin-bottom: .8rem;
       transform: translate(1rem);
-      // line-height: 2rem;
       font-family: $font-black;
       font-size: $size-h1;
       color: $second-light;
-      // background-color: $black-dark;
+      @media(max-width:767px){
+        margin: 0;
+      }
       span {
         font-family: $font-light;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        font-size: 2.5rem;
       }
     }
     &-subtitle {
@@ -121,7 +141,6 @@ export default {
       font-family: $font-light;
       font-size: $size-h2-landing;
       color: $second-light;
-
       // color: $black-dark;
     }
   }
