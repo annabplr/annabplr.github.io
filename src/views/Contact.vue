@@ -147,13 +147,20 @@ export default {
         }
         a:hover .contact-container-links-item-legend {
           display: block;
-          color: $black-dark;
-          text-decoration: none;
-          letter-spacing: .2rem;
         }
         &-legend {
           display: none;
+          color: $black-dark;
+          text-decoration: none;
+          letter-spacing: .2rem;
           transform: translate(0px,-1.5rem);
+          @media(max-width:767px) {
+            padding-top: .5rem;
+            letter-spacing: .1rem;
+            font-size: .75rem;
+            opacity: .5;
+            display: block;
+          }
         }
         &-picto {
           background-size: cover;
@@ -181,6 +188,7 @@ export default {
   }
   &-image {
     position: absolute;
+    pointer-events: none;
     z-index: 0;
     left: -10rem;
     bottom: 0;

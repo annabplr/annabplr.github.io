@@ -41,6 +41,9 @@
               </div>
           </div>
         </div>
+        <div class="projects-pro-each-desc-mobile">
+          {{ $t(proDisplay) }}
+        </div>
         <div class="projects-pro-each-right" v-show="proDisplay !== ''">
           <div class="projects-pro-each-right-text">
             <p>{{ $t(proDisplay + '-details') }}</p>
@@ -52,7 +55,6 @@
             <img @click= "displayModale = true" :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="">
             <div class="projects-pro-each-right-dots"></div>
             <div v-if="displayModale" @click= "displayModale = !displayModale" class="projects-pro-each-right-modale">
-              coucou
               <img :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="">
             </div>
           </div>
@@ -79,7 +81,6 @@
             <div class="projects-side-content-image">
               <img @click="displaySideModale = true" :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="">
               <div v-if="displaySideModale" @click= "displaySideModaleFunction()" class="projects-side-content-image-modale">
-                coucou
                 <img :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="">
                 <div class="projects-side-content-image-modale-close" @click="displaySideModale= !displaySideModale">X</div>
               </div>
@@ -98,6 +99,9 @@
           </div>
         </div>
       </div>
+      <div @click="displayNextProject()" class="projects-container-next">
+        <img :src="require(`@/assets/arrow.svg`)" alt="">
+      </div>
     </div>
   </div>
 </template>
@@ -107,9 +111,9 @@
   "fr": {
     "title": "expérience",
     "projects": "expérience professionnelle",
-    "projects-subtitle": "En 2019 et 2020, en tant que Développeuse Web FullStack au sein de l'agence web Kinoba (Lyon), j'ai eu l'opportunité de travailler principalement sur 3 gros projets :",
+    "projects-subtitle": "Depuis 2019, je travaille en tant que Développeuse Web FullStack au sein de l'agence web Kinoba (Lyon). J'ai eu l'opportunité de travailler principalement sur 3 gros projets :",
     "jitaku-type": "web-app",
-    "jitaku": "gestion globale de l'activité des promoteurs immobiliers",
+    "jitaku": "plateforme de gestion globale de l'activité des promoteurs immobiliers",
     "jitaku-lang": ["Ruby On Rails", "AngularJs"],
     "jitaku-details": "pour ce projet très conséquent, j'ai participé à l'amélioration de fonctionnalités existantes et à l'ajout de nouvelles fonctionnalités, tant en back qu'en front, sur des thématiques très diverses :",
     "jitaku-list": ["génération de pdf", "mise en place d'éditeur WYSIWYG", "gestion d'ActiveAdmin", "gestion de devis et de factures", "envoi de mails", "téléchargement de documents", "création d'enquêtes satisfaction", "création de graphiques (chart.js)", "tests, etc."],
@@ -140,31 +144,34 @@
   "en": {
     "title": "experience",
     "projects": "professional experience",
-    "projects-subtitle": "In 2019 et 2020, en poste au sein de l'agence web Kinoba (Lyon), en tant que Développeuse Web FullStack, j'ai eu l'opportunité de travailler sur 3 gros projets :",
-    "jitaku": "un projet s'addressant à des promoteurs immobiliers",
+    "projects-subtitle": "Since 2019, I'm working at Kinoba, a web agency based in Lyon (FR), as a Full Stack Web Developer. I've had the opportunity to work on mostly 3 big projects:",
+    "jitaku-type": "web-app",
+    "jitaku": "real-estate and building delivery global management platform",
     "jitaku-lang": ["Ruby On Rails", "AngularJs"],
-    "jitaku-details": "pour ce projet très conséquent, j'ai participé à l'amélioration de fonctionnalités existantes et à l'ajout de nouvelles fonctionnalités, tant en back qu'en front, sur des thématiques très diverses :",
-    "jitaku-list": ["génération de pdf", "mise en place d'éditeur WYSIWYG", "gestion d'ActiveAdmin", "gestion de devis et de factures", "envoi de mails", "téléchargement de documents", "création d'enquêtes satisfaction", "création de graphiques (chart.js)", "tests, etc."],
+    "jitaku-details": "For this huge project, I've worked to improve existing functionalities and to add new ones, in back-end and front-end, and on very different themes :",
+    "jitaku-list": ["pdf generation", "WYSIWYG editor", "ActiveAdmin management", "quotes and invoices management", "e-mails sending", "document upload and download", "survey creation", "charts creation (chart.js)", "testing, etc."],
     "jitaku-image": "jitak-project.jpg",
-    "packengers": "un projet de site vitrine pour une société de transporteurs innovante",
+    "packengers-type": "web-site",
+    "packengers": "innovative transport company",
     "packengers-lang": ["Vue.js"],
     "packengers-list": " ",
     "packengers-image": "pack-project.jpg",
-    "packengers-details": "pour ce projet, que j'ai mené de A à Z, j'ai pu améliorer mes compétences en Vue.js, notamment sur la partie Animations/Transitions ainsi que sur la Responsivité car le site a le comportement d'une application mobile.",
-    "e-succession": "un projet s'adressant à des particuliers auxquels les notaires font appel pour générer leurs declarations de succession",
+    "packengers-details": "For this project, leads from A to Z, I had the opportunity to improve my Vue.js skills, mostly on Animations/Transitions parts and on the website Responsivity as this website has the behaviour of a mobile app.",
+    "e-succession-type": "web-app",
+    "e-succession": "successoral declarations generation for notaries",
     "e-succession-lang": ["Ruby On Rails","Angular 8"],
     "e-succession-list": " ",
-    "e-succession-details": "pour ce projet, j'ai participé à la création du back-end de l'application, ainsi qu'à la création des tests, et à la génération du document Cerfa final, généré en PDF. J'ai également eu des missions en front-end, notamment à la création de pages du formulaire, présentant de nombreuses conditions.",
+    "e-succession-details": "For this project, I work mostly on the back-end (database creation, models and controllers), on tests creation, and on the finale pdf generation. I also worked on the front-end part : components creation for the form, with a lot of conditions.",
     "e-succession-image": "success-project.jpg",
     "side": "side projects",
-    "side-subtitle": "sur mon temps personnel, et pour développer mes compétences dans certains langages, j'ai développé 2 applications web",
+    "side-subtitle": "on my personal time, and to improve my skills, I've developped 2 web-apps :",
     "pauzi": {
-      "tech": "Pauzi est une Progressive Web App développée en Ruby on Rails et Vue.js, avec une utilisation principalement sur smartphone.",
-      "summary": "Pauzi est une application web pour amener du positif dans sa vie. Elle permet de sauvegarder chaque jour une pensée positive ou une connaissance apprise dans la journée, et de pouvoir les relire les jours de moins bien."
+      "tech": "Pauzi is a Progressive Web App, developped in Ruby on Rails and Vue.js, with a mobile-first design.",
+      "summary": "Pauzi is a web-app to bring positivity in your life. It allows to save every day a positive thought or a new knowledge learn during the day, and allow the user to read them again whenever you feel bad."
     },
     "batchka": {
-      "tech": "batchka est une Progressive Web App développée en Ruby on Rails, sans framework front, avec une utilisation principalement sur smartphone.",
-      "summary": "Batchka permet de prévoir son menu de la semaine à la maison. l'une de ses principales fonctionnalités est de générer un menu pour la semaine, une to-do list et une liste de courses en fonction des choix faits initialement. "
+      "tech": "batchka is a Progressive Web App developped in Ruby on Rails, without front framework, with a mobile-first design.",
+      "summary": "Batchka allows you to plan your menu of the week. one of its most important functionnality is to generate a menu for the week, a grocery store list, and a to-do list thanks to the choices you made initially. "
     }
   }
 }
@@ -203,6 +210,26 @@ export default {
       else {
         this.displaySideModale = !this.displaySideModale
       }
+    },
+    displayNextProject() {
+      console.log("coucou", this.pro, this.proDisplay, this.selectedProject)
+      if (this.pro === true) {
+        if (this.proDisplay === "jitaku") {
+          this.proDisplay = "packengers"
+        } else if (this.proDisplay === "packengers") {
+          this.proDisplay = "e-succession"
+        } else if (this.proDisplay === "e-succession") {
+          this.pro = false
+          this.selectedProject = "pauzi"
+        }
+      } else {
+        if (this.selectedProject === "pauzi") {
+          this.selectedProject = "batchka"
+        } else if (this.selectedProject === "batchka") {
+          this.pro = true
+          this.proDisplay = "jitaku"
+        }
+      }
     }
   }
 }
@@ -221,11 +248,8 @@ export default {
     background-color: $second-dark;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    // display: flex;
-    // flex-direction: column;
     border-left: .5rem solid $second-light;
     border-right: .5rem solid $second-light;
-    // justify-content: space-around;
     width: 80%;
     max-width: 880px;
     &-title {
@@ -255,6 +279,17 @@ export default {
           height: 100%;
           right: 0;
         }
+      }
+    }
+    &-next {
+      float: right;
+      background-image: url('../assets/blob-shape-4.svg');
+      background-size: cover;
+      padding: 2rem;
+      width: 2rem;
+      img {
+        width: 2rem;
+        margin-left: 30%;
       }
     }
   }
@@ -312,10 +347,9 @@ export default {
       display: flex;
       justify-content: space-around;
       @media(max-width:767px){
-        flex-direction: column;
+        // flex-direction: column;
       }
       &-left {
-        // text-align: justify;
         border: .4rem solid $black-dark;
         border-radius: 20px;
         width: 13rem;
@@ -324,21 +358,26 @@ export default {
         position: relative;
         cursor: pointer;
         @media(max-width:767px){
+          border: .3rem solid $black-dark;
           width: 80%;
-          margin-left: 5%;
-          padding-bottom: 1.5rem;
+          margin-left: 2.5%;
+          margin-right: 2.5%;
+          padding-bottom: 1.25rem;
           margin-bottom: 1rem;
           display: flex;
         }
         &.selected {
           border: .4rem solid $main-darker;
+          @media(max-width:767px){
+            border: .3rem solid $main-darker;
+          }
           .projects-pro-each-type {
             background-color: $second-light;
             opacity: 1;
           }
           @media(max-width:767px){
             .projects-pro-each-desc {
-              display: block;
+              display: none;
             }
           }
           // background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
@@ -358,7 +397,7 @@ export default {
           font-size: 1.25rem;
           line-height: .7rem;
           margin-bottom: .25rem;
-          width: 50%;
+          width: 100%;
         }
       }
       &-desc {
@@ -366,12 +405,33 @@ export default {
           margin-left: .5rem;
           display: none;
         }
+        &-mobile {
+          display: none;
+          @media(max-width:767px) {
+            width: 70%;
+            margin-left: 15%;
+            margin-top: .5rem;
+            padding-top: .5rem;
+            display: block;
+            font-size: 1.25rem;
+            min-height: 3rem;
+            font-family: $font-medium;
+            padding-left: .25rem;
+            border-left: .35rem solid $main-darker;
+          }
+        }
       }
       &-lang {
         position: absolute;
         right: 1.5rem;
         bottom: -.8rem;
         display: flex;
+        @media(max-width:767px){
+          flex-direction: column;
+          right: 1rem;
+          bottom: -.4rem;
+          // background-color: $second-dark;
+        }
         span {
           background-color: $second-dark;
           color: $main-dark;
@@ -381,6 +441,11 @@ export default {
           margin-left: .2rem;
           margin-right: .2rem;
           font-size: .85rem;
+          @media(max-width:767px){
+            text-align: right;
+            font-size: .6rem;
+            line-height: 1;
+          }
         }
       }
       &-right {
@@ -457,6 +522,11 @@ export default {
           align-items: center;
           img {
             width: 80%;
+            margin-left: 0;
+            @media(max-width:767px){
+              transform: rotate(90deg);
+              width: 80vh;
+            }
           }
         }
       }
@@ -486,6 +556,7 @@ export default {
         padding: 1rem;
         background-color: $second-light;
         @media(max-width:767px){
+          margin-left: 0;
           width: 80%;
           margin-bottom: 1rem;
         }
@@ -563,10 +634,14 @@ export default {
         font-family: $font-black;
         letter-spacing: .1rem;
         color: $black-dark;
+        opacity: .7;
         &.selected {
+          opacity: 1;
           border-bottom: .4rem solid $black-dark;
+          @media(max-width:767px){
+            background-color: $second-light;
+          }
           // color: $second-light;
-          // background-color: $black-dark;
           // background-repeat: no-repeat;
           // background-size: contain;
           .projects-side-each-dots {

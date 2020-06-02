@@ -9,6 +9,19 @@
   </div>
 </template>
 
+<i18n>
+{
+  "fr": {
+    "fr": "FR",
+    "en": "EN"
+  },
+  "en": {
+    "fr": "FR",
+    "en": "EN"
+  }
+}
+</i18n>
+
 <script>
 export default {
   name: 'Locale'
@@ -25,15 +38,23 @@ export default {
   margin: 1rem;
   @media(max-width:767px){
     width: auto;
+    margin: .5rem;
   }
   &-item {
     color: $second-light;
     margin-right: 1rem;
-    letter-spacing: .25rem;
+    letter-spacing: .15rem;
     border-bottom: .25rem solid transparent;
+    opacity: .8;
     cursor: pointer;
+    @media(max-width:767px){
+      margin-right: .5rem;
+      font-size: .75rem;
+      font-family: $font-black;
+    }
     &:hover, &-selected {
       font-weight: bolder;
+      opacity: 1;
       border-bottom: .25rem solid $second-light;
     }
   }

@@ -12,11 +12,6 @@ Vue.use(VueRouter)
     component: LandingPage
   },
   {
-    path: '/resume',
-    name: 'Resume',
-    component: () => import('../views/Resume.vue')
-  },
-  {
     path: '/competences',
     name: 'Skills',
     component: Skills

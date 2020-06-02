@@ -133,7 +133,7 @@
       "PWA": "PWA",
       "heroku": "heroku",
       "javascript": "javascript / jquery",
-      "angular": "angular"
+      "angular": "angular, node.js"
     },
     "general-title": "transverses",
     "general": {
@@ -169,7 +169,7 @@
     }
   },
   "en": {
-    "title": "skills",
+    "title": "profile & skills",
     "me-title": "annabelle",
     "me-age": "31 years old",
     "me-place": "pays de gex - geneva",
@@ -184,7 +184,7 @@
       "PWA": "PWA",
       "heroku": "heroku",
       "javascript": "javascript / jquery",
-      "angular": "angular"
+      "angular": "angular, node.js"
     },
     "general-title": "transversal",
     "general": {
@@ -203,20 +203,20 @@
     "perso-title": "personal",
     "perso": {
       "curious": "curious",
-      "rigorous": "rigoureuse",
-      "autonomous": "autonome"
+      "rigorous": "rigorous",
+      "autonomous": "autonomous"
     },
-    "like-title": "j'aime",
+    "like-title": "I like",
     "like": {
-      "think": "me creuser la tête",
-      "minimalism": "les designs minimalistes",
-      "learn": "apprendre de nouvelles choses"
+      "think": "hard thinking",
+      "minimalism": "minimalists designs",
+      "learn": "learn new things"
     },
-    "passion-title": "mais aussi",
+    "passion-title": "but also",
     "passion": {
-      "lettering": "la calligraphie",
-      "hiking": "la randonnée",
-      "gardening": "le jardinage"
+      "lettering": "hand lettering",
+      "hiking": "hiking",
+      "gardening": "gardening"
     }
   }
 }
@@ -269,6 +269,7 @@ export default {
       @media(max-width:767px){
         text-align: right;
         padding-right: 3rem;
+        margin-bottom: 3rem;
       }
       &-dots {
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
@@ -327,6 +328,12 @@ export default {
       &.pink-dots {
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a30b37' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
         background-repeat: repeat-x repeat-y;
+        @media(max-width:767px) {
+          top: auto;
+          left: auto;
+          right: -80%;
+          width: 80%;
+        }
       }
       &.grey-dots {
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23464849' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
@@ -385,8 +392,8 @@ export default {
       left: auto;
       width: 130%;
       @media(max-width:767px){
-        right: auto;
-        width: 100%;
+        right: -15%;
+        width: 15%;
       }
     }
   }
@@ -545,6 +552,9 @@ export default {
       display: flex;
       align-items: center;
       z-index: 10;
+      @media(max-width:767px){
+        left: .5rem;
+      }
     }
     &-image {
       position: absolute;
@@ -572,6 +582,9 @@ export default {
 }
 img {
   width: 150px;
+  @media(max-width:767px){
+    width: 115px;
+  }
 }
 h3 {
   margin: 40px 0 0;

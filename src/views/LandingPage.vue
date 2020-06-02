@@ -36,7 +36,8 @@
   },
   "en": {
     "hello": "hi, I'm",
-    "name": "annabelle PELLIER",
+    "firstname": "annabelle",
+    "lastname": "PELLIER",
     "job":"and I'm a full-stack  web developer",
     "place":"near Geneva 🇨🇭"
   }
@@ -100,20 +101,37 @@ export default {
   &-image {
     margin-right: 2rem;
     position: relative;
+    @media(max-width:767px){
+      width: 100%;
+      margin-right: 0;
+    }
     &-img {
       width: 150px;
       border-radius: 50%;
       z-index: 10;
+      @media(max-width:767px){
+        width: 100px;
+      }
     }
   }
   &-dots {
     position: absolute;
     z-index: -1;
     top: -10%;
-    left: -40%;
-    width: 150%;
-    height: 120%;
+    left: -25%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    @media(max-width:767px){
+      top: -10%;
+      left: auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+
+    }
   }
   &-text {
     text-align: right;
