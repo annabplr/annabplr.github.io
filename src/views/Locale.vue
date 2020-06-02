@@ -1,10 +1,10 @@
 <template>
   <div class="locale">
     <div :class="{'locale-item-selected': $i18n.locale === 'fr'}" class="locale-item" @click="$i18n.locale = 'fr'">
-      {{ $t('fr') }}
+      FR
     </div>
     <div :class="{'locale-item-selected': $i18n.locale === 'en'}" class="locale-item" @click="$i18n.locale = 'en'">
-      {{ $t('en') }}
+      EN
     </div>
   </div>
 </template>
@@ -38,7 +38,8 @@ export default {
   margin: 1rem;
   @media(max-width:767px){
     width: auto;
-    margin: .5rem;
+    margin: 0;
+    height: 100%;
   }
   &-item {
     color: $second-light;
@@ -48,7 +49,8 @@ export default {
     opacity: .8;
     cursor: pointer;
     @media(max-width:767px){
-      margin-right: .5rem;
+      margin: .5rem;
+      margin-top: 1em;
       font-size: .75rem;
       font-family: $font-black;
     }

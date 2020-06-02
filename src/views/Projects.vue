@@ -212,7 +212,6 @@ export default {
       }
     },
     displayNextProject() {
-      console.log("coucou", this.pro, this.proDisplay, this.selectedProject)
       if (this.pro === true) {
         if (this.proDisplay === "jitaku") {
           this.proDisplay = "packengers"

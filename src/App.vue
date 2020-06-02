@@ -69,7 +69,8 @@ body {
       top: 0;
       left: 0;
       height: 2rem;
-      width: 100%;
+      width: 80%;
+      margin-left: 10%;
       flex-direction: row;
       justify-content: center;
       padding-top: 2%;
@@ -84,8 +85,11 @@ body {
 }
 .projects + .app--menu {
   background-color: $main-darker;
+}
+.skills + .app--menu, .projects + .app--menu {
   @media(max-width:767px){
-    background-color: transparent;
+    z-index: 1000;
+    background: $second-dark;
   }
 }
 </style>

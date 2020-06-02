@@ -17,7 +17,9 @@
     "skills":"profil",
     "projects": "expérience",
     "contact":"contact",
-    "resume":"cv"
+    "resume":"cv",
+    "fr": "fr",
+    "en":"en"
   },
   "en": {
     "top": "top",
@@ -25,7 +27,9 @@
     "skills":"profile",
     "projects": "projects",
     "contact":"contact",
-    "resume":"resume"
+    "resume":"resume",
+    "fr": "fr",
+    "en":"en"
   }
 }
 </i18n>
@@ -43,25 +47,25 @@ export default {
 
 .menu {
   &--list {
-   list-style-type: none;
-   padding: 0;
-   &-item {
-     text-align: left;
-     margin: 2rem .5rem;
-     @media(max-width:767px){
-       display: inline-block;
-       margin: .5rem .5rem;
-     }
-     &-link {
-       letter-spacing: .25rem;
-       color: $second-light;
-       border-bottom: .25rem solid transparent;
-     }
-     &-link:hover, .router-link-exact-active {
-       font-weight: bolder;
-       border-bottom: .25rem solid $second-light;
-     }
-   }
- }
+    list-style-type: none;
+    padding: 0;
+    &-item {
+      text-align: left;
+      margin: 2rem .5rem;
+      @media(max-width:767px){
+        display: inline-block;
+        margin: .5rem .5rem;
+      }
+      &-link {
+        letter-spacing: .25rem;
+        color: $second-light;
+        border-bottom: .25rem solid transparent;
+      }
+      &-link:hover, .router-link-exact-active {
+        font-weight: bolder;
+        border-bottom: .25rem solid $second-light;
+      }
+    }
+  }
 }
 </style>
