@@ -9,19 +9,6 @@
   </div>
 </template>
 
-<i18n>
-{
-  "fr": {
-    "fr": "FR",
-    "en": "EN"
-  },
-  "en": {
-    "fr": "FR",
-    "en": "EN"
-  }
-}
-</i18n>
-
 <script>
 export default {
   name: 'Locale'

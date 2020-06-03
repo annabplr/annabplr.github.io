@@ -17,9 +17,7 @@
     "skills":"profil",
     "projects": "expérience",
     "contact":"contact",
-    "resume":"cv",
-    "fr": "fr",
-    "en":"en"
+    "resume":"cv"
   },
   "en": {
     "top": "top",
@@ -27,9 +25,7 @@
     "skills":"profile",
     "projects": "projects",
     "contact":"contact",
-    "resume":"resume",
-    "fr": "fr",
-    "en":"en"
+    "resume":"resume"
   }
 }
 </i18n>
