@@ -65,7 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media(max-width:767px){
+    @media(min-width:421px) and (max-width:767px){
       top: 0;
       left: 0;
       height: 2rem;
@@ -74,6 +74,22 @@ body {
       flex-direction: row;
       justify-content: center;
       padding-top: 2%;
+    }
+    @media(max-width:420px){
+      top: 0;
+      left: 0;
+      height: 2.75rem;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 2%;
+      .locale {
+        flex-direction: column;
+        &-item {
+          margin-top: 0;
+          margin-bottom: .25rem;
+        }
+      }
     }
     a {
       text-decoration: none;

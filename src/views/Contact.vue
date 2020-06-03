@@ -134,6 +134,12 @@ export default {
         margin-left: -5%;
         margin-bottom: 20%;
       }
+      h2 {
+        @media(max-width:420px){
+          font-size: 1.25rem;
+          margin-bottom: .5rem;
+        }
+      }
       &-global {
         display: flex;
       }
@@ -166,9 +172,13 @@ export default {
           background-size: cover;
           padding: 3rem;
           width: 2rem;
-          @media(max-width:767px) {
+          @media(min-width:421px) and (max-width:767px) {
             padding: 2rem;
             width: 1.5rem;
+          }
+          @media(max-width:420px){
+            padding: 1.5rem;
+            width: 1rem;
           }
           &-mail {
             background-image: url('../assets/blob-shape-1.svg');
@@ -192,9 +202,14 @@ export default {
     z-index: 0;
     left: -10rem;
     bottom: 0;
-    @media(max-width:767px) {
+    @media(min-width:421px) and (max-width:767px) {
       left: auto;
       bottom: -30%;
+      right: -30%;
+    }
+    @media(max-width:420px){
+      left: auto;
+      bottom: -40%;
       right: -30%;
     }
     &-img {

@@ -425,11 +425,16 @@ export default {
         right: 1.5rem;
         bottom: -.8rem;
         display: flex;
-        @media(max-width:767px){
+        @media(min-width:421px) and (max-width:767px){
           flex-direction: column;
           right: 1rem;
           bottom: -.4rem;
           // background-color: $second-dark;
+        }
+        @media(max-width:420px){
+          flex-direction: column;
+          right: .55rem;
+          bottom: -.3rem;
         }
         span {
           background-color: $second-dark;
@@ -440,10 +445,19 @@ export default {
           margin-left: .2rem;
           margin-right: .2rem;
           font-size: .85rem;
-          @media(max-width:767px){
+          @media(min-width:421px) and (max-width:767px){
             text-align: right;
             font-size: .6rem;
             line-height: 1;
+          }
+          @media(max-width:420px){
+            text-align: right;
+            font-size: .5rem;
+            line-height: .8;
+            padding-left: 0.1rem;
+            padding-right: 0.1rem;
+            margin-left: .1rem;
+            margin-right: .1rem;
           }
         }
       }
@@ -634,6 +648,11 @@ export default {
         letter-spacing: .1rem;
         color: $black-dark;
         opacity: .7;
+        @media(max-width:767px){
+          font-size: 1.5rem;
+          width: auto;
+          padding: .5rem 1.5rem;
+        }
         &.selected {
           opacity: 1;
           border-bottom: .4rem solid $black-dark;
@@ -653,7 +672,7 @@ export default {
             display: flex;
             z-index: -1;
             @media(max-width:767px){
-              right: 0;
+              right: -1.5rem;
               bottom: -1rem;
               width: 35%;
               height: 120%;

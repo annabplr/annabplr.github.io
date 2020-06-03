@@ -266,10 +266,13 @@ export default {
       margin-bottom: 6rem;
       border-bottom: .4rem solid $black-dark;
       z-index: 10;
-      @media(max-width:767px){
+      @media(max-width:421px) and (max-width:767px){
         text-align: right;
         padding-right: 3rem;
         margin-bottom: 3rem;
+      }
+      @media(max-width:420px){
+        font-size: 2.25rem;
       }
       &-dots {
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FCF7F8' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
@@ -302,6 +305,9 @@ export default {
       margin-bottom: 2rem;
       border: .4rem solid $black-dark;
       border-radius: 20px;
+      @media(max-width:420px){
+        padding: 1rem;
+      }
     }
     &-title {
       font-family: $font-black;
@@ -346,6 +352,10 @@ export default {
         height: 155%;
         left: -91%;
         width: 134%;
+        @media(max-width:420px){
+          width: 90%;
+          left: -70%;
+        }
       }
       &.grey-blob {
         background-size: contain;
@@ -354,6 +364,10 @@ export default {
         height: 110%;
         left: -75%;
         width: 83%;
+        @media(max-width:420px){
+          left: -70%;
+          width: 90%;
+        }
       }
       &.grey-long-blob {
         background-size: contain;
@@ -428,6 +442,9 @@ export default {
         animation-duration: 6000ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+        @media(max-width:420px){
+          bottom: -2rem;
+        }
       }
       &-right {
         animation-name: right-hand;
@@ -438,6 +455,9 @@ export default {
         width: 5rem;
         left: 50%;
         bottom: -50%;
+        @media(max-width:420px){
+          bottom: -100%;
+        }
       }
     }
   }
@@ -450,9 +470,15 @@ export default {
       z-index:10;
       margin-bottom: 1.5rem;
       margin-left: .5rem;
+      @media(max-width:420px){
+        margin-bottom: 0;
+      }
     }
     &-image {
       position: absolute;
+      @media(max-width:420px){
+        top : 20%;      
+      }
       &-black {
       }
       &-sun {
@@ -473,9 +499,16 @@ export default {
       min-width: 8rem;
       min-height: 10rem;
       z-index: 10;
+      @media(max-width:420px){
+        min-width: 50%;
+      }
     }
     &-image {
       position: absolute;
+      @media(max-width:420px){
+        top: 20%;
+        left: 30%;
+      }
       &-black {
 
       }
@@ -582,8 +615,11 @@ export default {
 }
 img {
   width: 150px;
-  @media(max-width:767px){
+  @media(min-width:421px) and (max-width:767px){
     width: 115px;
+  }
+  @media(max-width:420px){
+    width: 80px;
   }
 }
 h3 {
