@@ -11,6 +11,13 @@
     <meta property='og:url' content="https://annadev.com">
     <meta name="description" content="Annabelle Pellier, full stack web developer - RubyOnRails & Vue.Js, based in Pays de Gex - Geneva, open to new job opportunities."/>
     <title>annabelle pellier - full stack web developer - genève</title>
+    <script>(function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+      }
+    })();</script>
   </head>
   <body>
     <noscript>
