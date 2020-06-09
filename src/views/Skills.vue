@@ -13,7 +13,7 @@
           </h3>
           <div class="skills-group-data">
             <div class="skills-people-group">
-              <img class="skills-people-image skills-people-image-face" src="../assets/female.svg" alt="">
+              <img class="skills-people-image skills-people-image-face" src="../assets/female.svg" alt="avatar">
               <img class="skills-people-image skills-people-image-star skills-people-image-star-1" src="../assets/star.svg" alt="">
               <img class="skills-people-image skills-people-image-star skills-people-image-star-2" src="../assets/star.svg" alt="">
               <img class="skills-people-image skills-people-image-star skills-people-image-star-3" src="../assets/star.svg" alt="">
@@ -37,7 +37,7 @@
           </h3>
           <div class="skills-group-data">
             <div class="skills-keyboard-group">
-              <img class="skills-keyboard-image skills-keyboard-image-key" src="../assets/keyboards.svg" alt="">
+              <img class="skills-keyboard-image skills-keyboard-image-key" src="../assets/keyboards.svg" alt="keyboard">
               <img class="skills-keyboard-image skills-keyboard-image-left" src="../assets/hand-left.svg" alt="">
               <img class="skills-keyboard-image skills-keyboard-image-right" src="../assets/hand-right.svg" alt="">
             </div>
@@ -65,7 +65,7 @@
           </div>
           <div class="skills-wheel-images">
             <div class="skills-wheel-group">
-              <img class="skills-wheel-image" src="../assets/wheel.svg" alt="">
+              <img class="skills-wheel-image" src="../assets/wheel.svg" alt="wheel">
               <img class="skills-wheel-image skills-wheel-image-bis" src="../assets/wheel.svg" alt="">
               <img class="skills-wheel-image skills-wheel-image-ter" src="../assets/wheel.svg" alt="">
             </div>
@@ -80,7 +80,7 @@
         </h3>
         <div class="skills-group-data">
           <div class="skills-heart-group">
-            <img class="skills-heart-image skills-heart-image-black" src="../assets/heart.svg" alt="">
+            <img class="skills-heart-image skills-heart-image-black" src="../assets/heart.svg" alt="heart">
             <img class="skills-heart-image skills-heart-image-color" src="../assets/heart-color.svg" alt="">
           </div>
           <div class="skills-items">
@@ -105,7 +105,7 @@
             </ul>
           </div>
           <div class="skills-mountain-group">
-            <img class="skills-mountain-image skills-mountain-image-black " src="../assets/altitude.svg" alt="">
+            <img class="skills-mountain-image skills-mountain-image-black " src="../assets/altitude.svg" alt="mountain">
             <!-- <img class="skills-mountain-image skills-mountain-image-color" src="../assets/mountains.svg" alt=""> -->
             <img class="skills-mountain-image skills-mountain-image-sun" src="../assets/sun2.svg" alt="">
           </div>
@@ -477,7 +477,7 @@ export default {
     &-image {
       position: absolute;
       @media(max-width:420px){
-        top : 20%;      
+        top : 20%;
       }
       &-black {
       }

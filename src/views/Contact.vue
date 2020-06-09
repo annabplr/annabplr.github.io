@@ -11,7 +11,7 @@
             @mouseleave="hover = ''"
             class="contact-container-links-item">
               <a href="mailto:hello@annadev.com?subject=Contact">
-                <img class="contact-container-links-item-picto contact-container-links-item-picto-mail" src="../assets/telegram.png" alt="">
+                <img class="contact-container-links-item-picto contact-container-links-item-picto-mail" src="../assets/telegram.png" alt="link to send e-mail">
                 <div class="contact-container-links-item-legend">
                   {{ $t('email') }}
                 </div>
@@ -20,7 +20,7 @@
           <div @mouseover="hover = 'cv'"
           @mouseleave="hover = ''" class="contact-container-links-item">
             <a href="https://drive.google.com/open?id=1OOknn6oFbzbXnMPZTd4ZRVKGYMGw-ktB" target="_blank">
-              <img class="contact-container-links-item-picto contact-container-links-item-picto-cv" src="../assets/resume.png" alt="">
+              <img class="contact-container-links-item-picto contact-container-links-item-picto-cv" src="../assets/resume.png" alt="link to donwload my resume">
               <div class="contact-container-links-item-legend">
                 {{ $t('cv') }}
               </div>
@@ -29,7 +29,7 @@
           <div @mouseover="hover = 'linkedin'"
           @mouseleave="hover = ''"  class="contact-container-links-item">
             <a href="https://www.linkedin.com/in/apellier/" target="_blank">
-              <img class="contact-container-links-item-picto contact-container-links-item-picto-linkedin" src="../assets/linkedin.png" alt="">
+              <img class="contact-container-links-item-picto contact-container-links-item-picto-linkedin" src="../assets/linkedin.png" alt="link to my linkedin profile">
               <div class="contact-container-links-item-legend">
                 {{ $t('linkedin') }}
               </div>
@@ -38,7 +38,7 @@
           <div @mouseover="hover = 'github'"
           @mouseleave="hover = ''"  class="contact-container-links-item">
             <a href="https://github.com/annabplr" target="_blank">
-              <img class="contact-container-links-item-picto contact-container-links-item-picto-github" src="../assets/github-image.png" alt="">
+              <img class="contact-container-links-item-picto contact-container-links-item-picto-github" src="../assets/github-image.png" alt="link to my github profile">
               <div class="contact-container-links-item-legend">
                 {{ $t('github') }}
               </div>

@@ -52,10 +52,10 @@
             </ul>
           </div>
           <div class="projects-pro-each-right-image">
-            <img @click= "displayModale = true" :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="">
+            <img @click= "displayModale = true" :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="pro project screenshot">
             <div class="projects-pro-each-right-dots"></div>
             <div v-if="displayModale" @click= "displayModale = !displayModale" class="projects-pro-each-right-modale">
-              <img :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="">
+              <img :src="require(`@/assets/${$t(proDisplay + '-image')}`)" alt="pro project screenshot in full size">
             </div>
           </div>
         </div>
@@ -79,28 +79,28 @@
           </div>
           <div class="projects-side-content-right">
             <div class="projects-side-content-image">
-              <img @click="displaySideModale = true" :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="">
+              <img @click="displaySideModale = true" :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="side project screenshot">
               <div v-if="displaySideModale" @click= "displaySideModaleFunction()" class="projects-side-content-image-modale">
-                <img :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="">
+                <img :src="require(`@/assets/${selectedProject}-${selectedImage}.jpg`)" alt="side project screenshot in fullscreen">
                 <div class="projects-side-content-image-modale-close" @click="displaySideModale= !displaySideModale">X</div>
               </div>
             </div>
             <div class="projects-side-content-thumbnail">
               <div class="">
-                <img :class="{selected : (selectedImage === 1)}" @click="selectedImage = 1" :src="require(`@/assets/${selectedProject}-1.jpg`)" alt="">
+                <img :class="{selected : (selectedImage === 1)}" @click="selectedImage = 1" :src="require(`@/assets/${selectedProject}-1.jpg`)" alt="thumbnail for side project screenshot">
               </div>
               <div class="">
-                <img :class="{selected : (selectedImage === 2)}" @click="selectedImage = 2" :src="require(`@/assets/${selectedProject}-2.jpg`)" alt="">
+                <img :class="{selected : (selectedImage === 2)}" @click="selectedImage = 2" :src="require(`@/assets/${selectedProject}-2.jpg`)" alt="thumbnail for side project screenshot">
               </div>
               <div class="">
-                <img :class="{selected : (selectedImage === 3)}" @click="selectedImage = 3" :src="require(`@/assets/${selectedProject}-3.jpg`)" alt="">
+                <img :class="{selected : (selectedImage === 3)}" @click="selectedImage = 3" :src="require(`@/assets/${selectedProject}-3.jpg`)" alt="thumbnail for side project screenshot">
               </div>
             </div>
           </div>
         </div>
       </div>
       <div @click="displayNextProject()" class="projects-container-next">
-        <img :src="require(`@/assets/arrow.svg`)" alt="">
+        <img :src="require(`@/assets/arrow.svg`)" alt="arrow to next project">
       </div>
     </div>
   </div>
