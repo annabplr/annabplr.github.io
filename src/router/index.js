@@ -12,12 +12,12 @@ Vue.use(VueRouter)
     component: LandingPage
   },
   {
-    path: '/competences',
+    path: '/profil',
     name: 'Skills',
     component: Skills
   },
   {
-    path: '/projets',
+    path: '/experience',
     name: 'Projects',
     component: () => import('../views/Projects.vue')
   },
