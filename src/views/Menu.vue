@@ -2,8 +2,8 @@
   <div class="menu">
     <ul class="menu--list">
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/">{{ $t('top') }}</router-link></li>
-      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/competences">{{ $t('skills') }}</router-link></li>
-      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/projets">{{ $t('projects') }}</router-link></li>
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/profil">{{ $t('skills') }}</router-link></li>
+      <li class="menu--list-item"><router-link class="menu--list-item-link" to="/experience">{{ $t('projects') }}</router-link></li>
       <li class="menu--list-item"><router-link class="menu--list-item-link" to="/contact">{{ $t('contact') }}</router-link></li>
     </ul>
   </div>
